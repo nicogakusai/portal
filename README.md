@@ -22,5 +22,5 @@ SHIFT_JISだと、日本語が文字化けします。
 細かい修正は記入しなくてよいですが、新しいページを作成した場合などはお願いします。
 
 ## website更新に関するマニュアル
-- 準備中です。
+- https://docs.google.com/document/d/1fOxTyAznT8j4-b3MUi0XxqCz_xNQRyCMqrdQjkhAHV0
 <br>(管理者のみ閲覧可能です。)
