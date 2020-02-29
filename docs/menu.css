@@ -2,6 +2,7 @@ ul.ddmenu {
 		margin: 0px;					/* メニューバー外側の余白 */
 		padding: 0px 0px 0px 15px;		/* メニューバー内側の余白 */
 		background:  #cc0000;		/* バーの背景色 */
+		border: 3px ridge #ffdddd;	/* メニューバーの枠線と色 */
 	}
 	/* メインメニュー項目の装飾 */
 	ul.ddmenu a {
@@ -12,6 +13,7 @@ ul.ddmenu {
 		text-decoration: none;		/* メニュー項目の装飾(下線を消す) */
 		font-weight: bold;			/* 太字にする */
 		display: block;				/* 項目内全域をリンク可能にする */
+		border: 1px ridge #ffdddd;	/* メニュー項目線 */
 	}
 	ul.ddmenu a:hover {
 		background-color: #ffdddd;	/* メニュー項目にマウスが載ったときの背景色 */
