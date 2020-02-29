@@ -38,8 +38,6 @@
 				<li><a href="hanami.html" target="_parent">第２回　東方ニコ楽祭・花見</a></li>
 				<li><a href="gassaku.html" target="_parent">第３回　東方ニコ楽祭・合作</a></li>
 				<li><a href="syuen.html" target="_parent">第４回　東方ニコ楽祭・酒宴</a></li>
-                <li><a href="kaikou.html" target="_parent">第５回　東方ニコ楽祭・邂逅</a></li>
-                <li><a href="gassaku2020.html" target="_parent">第６回　東方ニコ楽祭・合作</a></li>
                 <li><a href="uta.html" target="_parent">東方ニコ楽祭　全歌詠み一覧</a></li>
 			</ul>
 		</li>
@@ -136,10 +134,10 @@
     // 歌一覧リンクを表示する。
     document.write("<h2>歌紹介はこちらから</h2>")
     document.write("<table border='1' rules='all'><tr>")
-    document.write("<td>　< ahref='uta.html?fest=all'>全部</a>　</td>")
+    document.write("<td>　<a href='uta.html?fest=all'>全部</a>　</td>")
     for(i=0;i<festnames.length;i++){
         if(festinfo[festnames[i]][0]!=""){
-            document.write("<td>　< ahref='uta.html?fest=" + festnames[i] + "'>" + festinfo[festnames[i]][1] + "</a>　</td>")
+            document.write("<td>　<a href='uta.html?fest=" + festnames[i] + "'>" + festinfo[festnames[i]][1] + "</a>　</td>")
             if(i%5==3){
                 document.write("</tr><tr>");
             }
@@ -151,10 +149,10 @@
     // イラスト一覧リンクを表示する。
     document.write("<h2>イラスト一覧はこちらから</h2>")
     document.write("<table border='1' rules='all'><tr>")
-    document.write("<td>　< ahref='uta.html?mode=illustlist'>全部</a>　</td>")
+    document.write("<td>　<a href='uta.html?mode=illustlist'>全部</a>　</td>")
     for(i=0;i<festnames.length;i++){
         if(festinfo[festnames[i]][0]!=""){
-            document.write("<td>　< ahref='uta.html?fest=" + festnames[i] + "&mode=illustlist'>" + festinfo[festnames[i]][1] + "</a>　</td>")
+            document.write("<td>　<a href='uta.html?fest=" + festnames[i] + "&mode=illustlist'>" + festinfo[festnames[i]][1] + "</a>　</td>")
             if(i%5==3){
                 document.write("</tr><tr>");
             }
@@ -166,10 +164,10 @@
     //詠み人一覧リンクを表示する
     document.write("<h2>詠み人一覧はこちらから</h2>")
     document.write("<table border='1' rules='all'><tr>")
-    document.write("<td>　< ahref='uta.html?mode=userlist'>全部</a>　</td>")
+    document.write("<td>　<a href='uta.html?mode=userlist'>全部</a>　</td>")
     for(i=0;i<festnames.length;i++){
         if(festinfo[festnames[i]][0]!=""){
-            document.write("<td>　< ahref='uta.html?fest=" + festnames[i] + "&mode=userlist'>" + festinfo[festnames[i]][1] + "</a>　</td>")
+            document.write("<td>　<a href='uta.html?fest=" + festnames[i] + "&mode=userlist'>" + festinfo[festnames[i]][1] + "</a>　</td>")
             if(i%5==3){
                 document.write("</tr><tr>");
             }
@@ -250,7 +248,7 @@
                     }
                     imgiframe = "<iframe width='312' height='176' src='https://ext.seiga.nicovideo.jp/thumb/"+ array[i][0] +"' scrolling='no' style='border:solid 1px #888;' frameborder='0'><a href='https://seiga.nicovideo.jp/seiga/"+ array[i][0] +"'> " + array[i][1] + "</a></iframe>"
                     document.write(imgiframe);
-                    document.write("<br><font size='3'>< ahref='uta.html?illust=" + array[i][0] + "'>このイラストの歌をもっと見る</a></font></td>");
+                    document.write("<br><font size='3'><a href='uta.html?illust=" + array[i][0] + "'>このイラストの歌をもっと見る</a></font></td>");
                     printedIllust = array[i][0];
                     illustCount++;
                     }
@@ -285,12 +283,12 @@
             }
             users.sort();
             for(i=0; i<(users.length/2); i++){
-                document.write("<tr><td width='" + tdsize + "' align='center'>< ahref='uta.html?user=" + users[i*2] + "'>" + users[i*2]+"</a></td>");
+                document.write("<tr><td width='" + tdsize + "' align='center'><a href='uta.html?user=" + users[i*2] + "'>" + users[i*2]+"</a></td>");
                 if(i*2+1 < users.length){
                     if(isMobile){
                         document.write("</tr><tr>")
                     }
-                    document.write("<td width='" + tdsize + "' align='center'>< ahref='uta.html?user=" + users[i*2+1] + "'>" + users[i*2+1]+"</a></td>");
+                    document.write("<td width='" + tdsize + "' align='center'><a href='uta.html?user=" + users[i*2+1] + "'>" + users[i*2+1]+"</a></td>");
                 }else if(!isMobile){
                     document.write("<td></td>");
                 }
@@ -319,7 +317,7 @@
                 if((userName.length==0 || array[i][4].trim() == userName || tmpuser) && (paramIllust.length<3 || array[i][0] == paramIllust)){
                     if(array[i][0] != printedIllust){   //前に表示したイラストと異なる場合のみイラスト情報を表示する。
                         imgiframe = "<table border='2' rules='all'><tr><td width='314' rowspan='4'><iframe width='312' height=\"176\" src=\"https://ext.seiga.nicovideo.jp/thumb/"+ array[i][0] +"\" scrolling=\"no\" style=\"border:solid 1px #888;\" frameborder=\"0\"><a href=\"https://seiga.nicovideo.jp/seiga/"+ array[i][0] +"\"> " + array[i][1] + "</a></iframe>";
-                        imginfo = "<td width='300'><font size='3'>< ahref='uta.html?illust=" + array[i][0] + "'>このイラストの歌をもっと見る</a></font></td></tr>";
+                        imginfo = "<td width='300'><font size='3'><a href='uta.html?illust=" + array[i][0] + "'>このイラストの歌をもっと見る</a></font></td></tr>";
                         imginfo = imginfo + "<tr><td>東方ニコ楽祭・"+array[i][5]+"</td></tr><tr><td>★お題<br>"+array[i][7]+"</td></tr><tr><td>★連歌<br>"+array[i][8]+"</td></tr>";
                         document.write(imgiframe+imginfo);
                         
@@ -330,7 +328,7 @@
                     document.write("<tr><td align=center>" + array[i][3] + "</td></tr>");
                     document.write("<tr><td align=right>" + array[i][4] + "　</td></tr></table>");
 
-                    document.write("<p><font size='3'>< ahref='uta.html?user=" + array[i][4] + "'>この詠み手の歌をもっと見る</a></font></p><br><br>");
+                    document.write("<p><font size='3'><a href='uta.html?user=" + array[i][4] + "'>この詠み手の歌をもっと見る</a></font></p><br><br>");
                     allCount = allCount + 1;
                 }
             }
