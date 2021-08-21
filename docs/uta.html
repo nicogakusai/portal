@@ -289,12 +289,12 @@
             }
             users.sort();
             for(i=0; i<(users.length/2); i++){
-                document.write("<tr><td width='" + tdsize + "' align='center'><a href='uta.html?user=" + users[i*2] + "'>" + users[i*2]+"</a></td>");
+                document.write("<tr><td width='" + tdsize + "' align='center'><a href='uta.html?user=" + encodeURI(users[i*2]) + "'>" + users[i*2]+"</a></td>");
                 if(i*2+1 < users.length){
                     if(isMobile){
                         document.write("</tr><tr>")
                     }
-                    document.write("<td width='" + tdsize + "' align='center'><a href='uta.html?user=" + users[i*2+1] + "'>" + users[i*2+1]+"</a></td>");
+                    document.write("<td width='" + tdsize + "' align='center'><a href='uta.html?user=" + encodeURI(users[i*2+1]) + "'>" + users[i*2+1]+"</a></td>");
                 }else if(!isMobile){
                     document.write("<td></td>");
                 }
@@ -334,7 +334,7 @@
                     document.write("<tr><td align=center>" + array[i][3] + "</td></tr>");
                     document.write("<tr><td align=right>" + array[i][4] + "　</td></tr></table>");
 
-                    document.write("<p><font size='3'><a href='uta.html?user=" + array[i][4] + "'>この詠み手の歌をもっと見る</a></font></p><br><br>");
+                    document.write("<p><font size='3'><a href='uta.html?user=" + encodeURI(array[i][4]) + "'>この詠み手の歌をもっと見る</a></font></p><br><br>");
                     allCount = allCount + 1;
                 }
             }
