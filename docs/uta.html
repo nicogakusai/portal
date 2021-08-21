@@ -216,22 +216,14 @@
     if(userName.length>0){
         document.write(" value='" + userName + "'");
     }
-/*    if(hankakuFlg==1){
-        document.write("><br><input type='checkbox' name='userHankaku' checked='checked'> 半角全角を無視する。<br>");
-    }else{
-        document.write("><br><input type='checkbox' name='userHankaku'> 半角全角を無視する。<br>");
-    }*/
     if(bubunFlg==1){
         document.write("><br><input type='checkbox' name='userBubun' checked='checked'> 部分一致で検索する。");
     }else{
         document.write("><br><input type='checkbox' name='userBubun'> 部分一致で検索する。");
     }
     document.write("</td></tr></table>");
+
     document.write("<p><input type='button' value='表示' onclick='link()'/></p></form><p><a href='uta-manual.html' target='_blank'>歌詠みページ 操作マニュアル(別のタブで開きます)</a></p><hr>");
-
-
-
-
 
     if(fest[0]=="all"){
         fest = festnames;
@@ -366,7 +358,7 @@
     function link(){
         var url = "uta.html?fest=" + document.form.fest.value;
         if(document.form.user.value != ""){
-            url = url + "&user=" + document.form.user.value;
+            url = url + "&user=" + encodeURI(document.form.user.value);
 /*            if(document.form.userHankaku.checked){
                 url = url + "&hankaku";
             }*/
