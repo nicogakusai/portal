@@ -103,6 +103,21 @@ body {
 <br>
 　　　　　　　　　※設定タグ：<input id="copyTarget" size="40" value="第二回幻想コメント大賞 東方動画イラスト支援" readonly>
     <button onclick="copyToClipboard()">Copy text</button> （必ずタグロックをお願いします）
+		<script>
+        function copyToClipboard() {
+            // コピー対象をJavaScript上で変数として定義する
+            var copyTarget = document.getElementById("copyTarget");
+
+            // コピー対象のテキストを選択する
+            copyTarget.select();
+
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+
+            // コピーをお知らせする
+            alert("コピーできました！ : " + copyTarget.value);
+        }
+    </script>
                 <br></font>　　　　　　　　　　<font size="5"><strong>イラスト投稿期間　　　：2022年7月1日（金）～7月7日（木）</strong></font>
                       <br>
 <br>
@@ -162,4 +177,5 @@ body {
 <br>
 <br>
 </p>
+
 </body></html>
