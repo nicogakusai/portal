@@ -127,10 +127,24 @@ body {
 ※イラスト支援静画や詠まれた歌の動画内使用を歓迎<br>
 ※リアルイベント頒布のXFD動画の投稿を歓迎<br>
 ※参加された動画は、生放送・Twitterなどで、使用また紹介されることがあります<br>
-※設定タグ：<input id="copyTarget" value="東方ニコ楽祭・思人" readonly>
+※設定タグ：<input id="copyTarget2" value="東方ニコ楽祭・思人" readonly>
     <button onclick="copyToClipboard()">Copy text</button> （必ずタグロックをお願いします） 
                 <br></font><font size="4"><strong>アレンジ投稿期間　　　：2022年9月16日（金）午後9時～9月18日（日）午後9時</strong></font>
-                
+      <script>
+        function copyToClipboard() {
+            // コピー対象をJavaScript上で変数として定義する
+            var copyTarget = document.getElementById("copyTarget2");
+
+            // コピー対象のテキストを選択する
+            copyTarget.select();
+
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+
+            // コピーをお知らせする
+            alert("コピーできました！ : " + copyTarget.value);
+        }
+    </script>
                       <br><br>
 	
 	
@@ -140,13 +154,13 @@ body {
 動画形式は不問。MMD、文字、やってみた等、何でもありです。<br>
 ※R18作品はご遠慮ください<br>
 ※参加された動画は、生放送・Twitterなどで、使用また紹介されることがあります<br>
-※設定タグ：<input id="copyTarget" size="40" value="東方ニコ楽祭・思人 推し普及動画" readonly>
+※設定タグ：<input id="copyTarget3" size="40" value="東方ニコ楽祭・思人 推し普及動画" readonly>
     <button onclick="copyToClipboard()">Copy text</button> （必ずタグロックをお願いします） 
       <br>
 			<script>
         function copyToClipboard() {
             // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copyTarget");
+            var copyTarget = document.getElementById("copyTarget3");
 
             // コピー対象のテキストを選択する
             copyTarget.select();
