@@ -133,7 +133,7 @@ body {
       <script>
         function copyToClipboard() {
             // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copyTarget2");
+            var copyTarget = document.getElementById("copyTarget2" + index);
 
             // コピー対象のテキストを選択する
             copyTarget.select();
@@ -160,7 +160,7 @@ body {
 			<script>
         function copyToClipboard() {
             // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copyTarget3");
+            var copyTarget = document.getElementById("copyTarget3" + index);
 
             // コピー対象のテキストを選択する
             copyTarget.select();
