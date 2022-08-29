@@ -91,22 +91,7 @@ body {
 ※R18作品はご遠慮ください<br>
 ※参加されたイラストは、生放送・Twitterなどで、使用また紹介されることがあります<br>
 ※設定タグ：<input id="copyTarget1" size="40" value="東方ニコ楽祭・思人 東方動画イラスト支援" readonly>
-    <button onclick="copyToClipboard()">Copy text</button> （必ずタグロックをお願いします） 
-		<script>
-        function copyToClipboard() {
-            // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copyTarget1");
-
-            // コピー対象のテキストを選択する
-            copyTarget.select();
-
-            // 選択しているテキストをクリップボードにコピーする
-            document.execCommand("Copy");
-
-            // コピーをお知らせする
-            alert("コピーできました！ : " + copyTarget.value);
-        }
-    </script>
+    <button onclick="copyToClipboard(1)">Copy text</button> （必ずタグロックをお願いします） 
 <br>
 <font size="4"><strong>イラスト投稿期間　　　：2022年9月1日（木）～9月14日（水）</strong></font><br>
 <br><br>
@@ -128,23 +113,8 @@ body {
 ※リアルイベント頒布のXFD動画の投稿を歓迎<br>
 ※参加された動画は、生放送・Twitterなどで、使用また紹介されることがあります<br>
 ※設定タグ：<input id="copyTarget2" value="東方ニコ楽祭・思人" readonly>
-    <button onclick="copyToClipboard()">Copy text</button> （必ずタグロックをお願いします） 
+    <button onclick="copyToClipboard(2)">Copy text</button> （必ずタグロックをお願いします） 
                 <br></font><font size="4"><strong>アレンジ投稿期間　　　：2022年9月16日（金）午後9時～9月18日（日）午後9時</strong></font>
-      <script>
-        function copyToClipboard(index) {
-            // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copyTarget2" + index);
-
-            // コピー対象のテキストを選択する
-            copyTarget.select();
-
-            // 選択しているテキストをクリップボードにコピーする
-            document.execCommand("Copy");
-
-            // コピーをお知らせする
-            alert("コピーできました！ : " + copyTarget.value);
-        }
-    </script>
                       <br><br>
 	
 	
@@ -155,12 +125,12 @@ body {
 ※R18作品はご遠慮ください<br>
 ※参加された動画は、生放送・Twitterなどで、使用また紹介されることがあります<br>
 ※設定タグ：<input id="copyTarget3" size="40" value="東方ニコ楽祭・思人 推し普及動画" readonly>
-    <button onclick="copyToClipboard()">Copy text</button> （必ずタグロックをお願いします） 
+    <button onclick="copyToClipboard(3)">Copy text</button> （必ずタグロックをお願いします） 
       <br>
 			<script>
         function copyToClipboard(index) {
             // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copyTarget3" + index);
+            var copyTarget = document.getElementById("copyTarget" + index);
 
             // コピー対象のテキストを選択する
             copyTarget.select();
