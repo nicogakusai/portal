@@ -151,6 +151,47 @@ body {
       width="312" scrolling="no"></iframe><br 
 <br>
 <br>
+<font size="5">告知宣伝動画</font><br>
+<script type="text/javascript">
+  var utaCount = 0;
+  var array = loadFile("shijin.csv");
+  if(utaCount > 0){
+    var utaNo = Math.floor(Math.random()*utaCount);
+    var imgiframe = "<table border='2' rules='cols'  cellpadding='0'><tr><td width='314' rowspan='4'><iframe width='312' height=\"176\" src=\"https://ext.seiga.nicovideo.jp/thumb/"+ array[utaNo][0] +"\" scrolling=\"no\" style=\"border:solid 1px #888;\" frameborder=\"0\"><a href=\"https://seiga.nicovideo.jp/seiga/"+ array[utaNo][0] +"\"> " + array[utaNo][1] + "</a></iframe>";
+    var imginfo = "<td width='600' bgcolor='#000000'><font size='3'>　<a href='uta.html?illust=" + array[utaNo][0] + "'><font color='#ffffff'>このイラストの歌をもっと見る</font></a><br>　<a href='uta.html?user=" + encodeURI(array[utaNo][4]) + "'><font color='#ffffff'>この詠み手の歌をもっと見る</font></a><br>　<a href='uta.html?fest=" + array[utaNo][6] + "'><font color='#ffffff'>東方ニコ楽祭・"+array[utaNo][5]+"の歌をもっと見る</font></a></font></td></tr>";
+    document.write(imgiframe+imginfo);
+    document.write("<tr><td align=left bgcolor='#FFFFF0'><font face='Noto Serif JP'>　" + array[utaNo][2] + "</font></td></tr>");
+    document.write("<tr><td align=center bgcolor='#FFFFF0'><font face='Noto Serif JP'> " + array[utaNo][3] + " </font></td></tr>");
+    document.write("<tr><td align=right bgcolor='#FFFFF0'><font face='Noto Serif JP'>" + array[utaNo][4] + "　</font></td></tr></table>");
+  }
+
+  function loadFile(filename){
+    var fileData = new XMLHttpRequest();
+    var resultArray = new Array();
+
+    if(filename.length!=0){
+      var filePath = "uta/" + filename;
+
+      fileData.open("get", filePath, false);
+      fileData.send(null);
+
+      var lines = fileData.responseText.replace(/""/g,"【ダブルクォート2個】").replace(/"/g,"").replace(/【ダブルクォート2個】/g,'"').split("\n");
+
+      for(var i=0; i<lines.length; i++){
+        var tmp = lines[i].split(",");
+        if(tmp.length != 1){
+          resultArray.push(tmp);
+          utaCount = utaCount + 1;
+        }
+      }
+    }
+    return resultArray;
+  }
+</script>
+
+
+
+
 </p></td>
   <td width="15%" align="center"></td>
   <p align="left"></p>
