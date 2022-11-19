@@ -1,0 +1,43 @@
+body {
+	background-image: url("../parts/11th/blue-snow.jpg");
+	background-position:center center; 
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+h1 {
+	color: #0060a0;/*文字色*/
+	padding: 0.5em;/*文字周りの余白*/
+}
+
+h2 {
+	color: #0060a0;/*文字色*/
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 20px;
+	padding-bottom: 0px;
+	margin:0px;
+}
+
+h2:before {
+	margin-right: 5px;
+	content: url(../parts/11th/ice_icon.png);
+	position: relative;
+	top: 5px;
+	margin: 0 10px 0 0;
+}
+
+h3 {
+	color: #0060a0;/*文字色*/
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin:0px;
+}
+
+h4 {
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin:0px;
+}

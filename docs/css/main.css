@@ -1,0 +1,149 @@
+ul{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left :50px;
+	margin :0px;
+}
+
+div{
+	margin-left: 10%;
+	margin-right: 10%;
+	background:rgba(255,255,255,0.6);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+
+}
+
+p{
+	margin:0px;
+	margin-left:15px;
+	margin-right:15px;
+}
+
+li{
+	padding-left:30px;
+	padding-right:30px;
+}
+
+/*更新情報・Twitter用*/
+table.under {
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+}
+table.under td{
+	margin: 0%;
+	width: 50%;
+}
+
+@media screen and (max-width:900px){
+	table.under td{
+		margin: 0%;
+		width: 100%;
+		display: block;
+	}
+}
+
+
+/*メニューバー用*/
+
+ul.ddmenu {
+	margin: 0px;					/* メニューバー外側の余白 */
+	padding: 0px 0px 0px 15px;		/* メニューバー内側の余白 */
+	background:  #cc0000;		/* バーの背景色 */
+	border: 3px ridge #ffdddd;	/* メニューバーの枠線と色 */
+}
+/* メインメニュー項目の装飾 */
+ul.ddmenu a {
+	background-color: #cc0000;	/* メニュー項目の背景色 */
+	color: white;				/* メニュー項目の文字色 */
+	line-height: 40px;			/* メニュー項目のリンクの高さ */
+	text-align: center;			/* メインメニューの文字列の配置 */
+	text-decoration: none;		/* メニュー項目の装飾(下線を消す) */
+	font-weight: bold;			/* 太字にする */
+	display: block;				/* 項目内全域をリンク可能にする */
+	border: 1px ridge #ffdddd;	/* メニュー項目線 */
+}
+ul.ddmenu a:hover {
+	background-color: #ffdddd;	/* メニュー項目にマウスが載ったときの背景色 */
+	color: #dd0000;				/* メニュー項目にマウスが載ったときの文字色 */
+}
+
+/* 幅が狭いとき */
+@media screen and (max-width:1199px){
+ul.ddmenu li {
+	width: 100%;			/* メニュー項目の横幅 */
+	display: inline-block;	/* 横並びに配置する */
+	list-style-type: none;	/* リストの先頭記号を消す */
+	position: relative;		/* サブメニュー表示の基準位置にする */
+	padding-left:0px;
+	padding-right:0px;
+}
+
+/* サブメニューがある場合に開く処理 */
+ul.ddmenu li:hover ul {
+	display: none;		/* マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+/* サブメニューの装飾 */
+ul.ddmenu ul {
+	display: none;			/* 標準では非表示にする */
+}
+}
+
+/* 幅が広いとき */
+@media screen and (min-width:1200px){
+ul.ddmenu li {
+	width: 225px;			/* メニュー項目の横幅 */
+	display: inline-block;	/* 横並びに配置する */
+	list-style-type: none;	/* リストの先頭記号を消す */
+	position: relative;		/* サブメニュー表示の基準位置にする */
+	padding-left:0px;
+	padding-right:0px;
+
+}
+
+/* サブメニューがある場合に開く処理 */
+ul.ddmenu li:hover ul {
+	display: block;		/* マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+/* サブメニューの装飾 */
+ul.ddmenu ul {
+	margin: 0px;			/* サブメニュー外側の余白 */
+	padding: 0px;			/* サブメニュー内側の余白 */
+	display: none;			/* 標準では非表示にする */
+	position: absolute;		/* 絶対配置にする */
+}
+/* サブメニュー項目の装飾 */
+ul.ddmenu ul li {
+	width: 250px;					/* サブメニュー1項目の横幅 */
+	border-top: 1px solid pink;		/* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+ul.ddmenu ul li a {
+	line-height: 35px;		/* サブメニュー1項目の高さ */
+	text-align: left;		/* 文字列の配置 */
+	padding-left: 5px;		/* 文字列前方の余白 */
+	font-weight: normal;	/* 太字にはしない */
+	padding-left:0px;
+	padding-right:0px;
+}
+ul.ddmenu ul li a:hover {
+	background-color: #ffff80;	/* サブメニュー項目にマウスが載ったときの背景色 */
+	color: #005500;				/* サブメニュー項目にマウスが載ったときの文字色 */
+}
+}
+
+
+
+@media screen and (max-width:800px){ /*モバイル対応*/
+	div{
+		margin-left:0%;
+		margin-right:0%;
+		background:rgba(255,255,255,0.6);
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
