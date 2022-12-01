@@ -5,7 +5,7 @@ ul{
 	margin :0px;
 }
 
-div{
+div.mainContents{
 	margin-left: 10%;
 	margin-right: 10%;
 	background:rgba(255,255,255,0.6);
@@ -46,11 +46,11 @@ h2.under::before{
 table.under {
 	margin-left: 5%;
 	margin-right: 5%;
-	width: 800px;
+	width: 90%;
 }
 table.under td{
 	margin: 0%;
-	width: 400px;
+	width: 45%;
 }
 
 @media screen and (max-width:900px){
