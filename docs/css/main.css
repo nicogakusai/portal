@@ -28,14 +28,29 @@ li{
 }
 
 /*更新情報・Twitter用*/
+h2.under{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align:center;
+	font-size: 20px;
+	background-color: rgba(255,255,255,0.9);
+	color: #000000;
+}
+h2.under::before{
+	content:none;
+}
+
+
 table.under {
 	margin-left: 5%;
 	margin-right: 5%;
-	width: 90%;
+	width: 800px;
 }
 table.under td{
 	margin: 0%;
-	width: 50%;
+	width: 400px;
 }
 
 @media screen and (max-width:900px){
