@@ -152,7 +152,7 @@ ul.ddmenu ul li a:hover {
 
 
 @media screen and (max-width:800px){ /*モバイル対応*/
-	div{
+	div.mainContents{
 		margin-left:0%;
 		margin-right:0%;
 		background:rgba(255,255,255,0.6);
