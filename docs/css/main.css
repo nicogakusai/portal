@@ -38,25 +38,43 @@ h2.under{
 	background-color: rgba(255,255,255,0.9);
 	color: #000000;
 }
-h2.under::before{
+h2.under:before{
 	content:none;
 }
 
+@media screen and (min-width:801px){
+	div.under{
+		width:48%;
+		margin:1%;
+		float:left;
+	}
+}
+
+@media screen and (max-width:800px){
+	div.under{
+		width:98%;
+		margin:1%;
+		float:none;
+	}
+}
 
 table.under {
-	margin-left: 5%;
-	margin-right: 5%;
-	width: 90%;
+	margin: auto;
+	width: 1000px;
 }
 table.under td{
 	margin: 0%;
-	width: 45%;
+	width: 500px;
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
+	table.under tr{
+		margin: 0px;
+		width: auto;
+	}
 	table.under td{
-		margin: 0%;
-		width: 100%;
+		margin: 0px;
+		width: 80%;
 		display: block;
 	}
 }
@@ -146,7 +164,6 @@ ul.ddmenu ul li a {
 ul.ddmenu ul li a:hover {
 	background-color: #ffff80;	/* サブメニュー項目にマウスが載ったときの背景色 */
 	color: #005500;				/* サブメニュー項目にマウスが載ったときの文字色 */
-}
 }
 
 
