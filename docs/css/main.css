@@ -58,28 +58,6 @@ h2.under:before{
 	}
 }
 
-table.under {
-	margin: auto;
-	width: 1000px;
-}
-table.under td{
-	margin: 0%;
-	width: 500px;
-}
-
-@media screen and (max-width:1000px){
-	table.under tr{
-		margin: 0px;
-		width: auto;
-	}
-	table.under td{
-		margin: 0px;
-		width: 80%;
-		display: block;
-	}
-}
-
-
 /*メニューバー用*/
 
 ul.ddmenu {
@@ -127,14 +105,14 @@ ul.ddmenu ul {
 
 /* 幅が広いとき */
 @media screen and (min-width:1200px){
-ul.ddmenu li {
-	width: 225px;			/* メニュー項目の横幅 */
-	display: inline-block;	/* 横並びに配置する */
-	list-style-type: none;	/* リストの先頭記号を消す */
-	position: relative;		/* サブメニュー表示の基準位置にする */
-	padding-left:0px;
-	padding-right:0px;
-
+	ul.ddmenu li {
+		width: 225px;			/* メニュー項目の横幅 */
+		display: inline-block;	/* 横並びに配置する */
+		list-style-type: none;	/* リストの先頭記号を消す */
+		position: relative;		/* サブメニュー表示の基準位置にする */
+		padding-left:0px;
+		padding-right:0px;
+	}
 }
 
 /* サブメニューがある場合に開く処理 */
@@ -153,6 +131,7 @@ ul.ddmenu ul li {
 	width: 250px;					/* サブメニュー1項目の横幅 */
 	border-top: 1px solid pink;		/* 項目上側の枠線(ピンク色で1pxの実線) */
 }
+
 ul.ddmenu ul li a {
 	line-height: 35px;		/* サブメニュー1項目の高さ */
 	text-align: left;		/* 文字列の配置 */
@@ -161,6 +140,7 @@ ul.ddmenu ul li a {
 	padding-left:0px;
 	padding-right:0px;
 }
+
 ul.ddmenu ul li a:hover {
 	background-color: #ffff80;	/* サブメニュー項目にマウスが載ったときの背景色 */
 	color: #005500;				/* サブメニュー項目にマウスが載ったときの文字色 */
