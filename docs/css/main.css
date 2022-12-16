@@ -61,6 +61,8 @@ h2.under:before{
 /*メニューバー用*/
 
 ul.ddmenu {
+	position: relative;
+	z-index: 100;
 	margin: 0px;					/* メニューバー外側の余白 */
 	padding: 0px 0px 0px 15px;		/* メニューバー内側の余白 */
 	background:  #cc0000;		/* バーの背景色 */
@@ -158,4 +160,5 @@ ul.ddmenu ul li a:hover {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+
 }
