@@ -159,6 +159,30 @@ div.inline{
 	border-bottom: 3px double #004000;
 }
 
+button.close{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius:10px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-family: 'Zen Antique';
+	background-color:#a0a0a0;
+	color :#000000;
+}
+
+button.close:hover{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius:10px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-family: 'Zen Antique';
+	background-color:#a0a0a0;
+	color :#000000;
+}
+
 button{
 	padding: 10px;
 	padding-left: 20px;
