@@ -24,7 +24,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>東方ニコ楽祭 イラスト・歌詠み一覧</title>
 
-
 <p align="center">
 <table width="100%">
 
@@ -80,6 +79,7 @@
     festinfo[festnames[8]] = ["",""];
     festinfo[festnames[9]] = ["",""];
     festinfo[festnames[10]] = ["",""];
+    festinfo["nicodosai_15th"] = ["nicodosai_15th.csv","第15回東方ニコ童祭 半刻歌絵巻"];
 
     /* ここまでメンテナンス範囲 */
 
@@ -100,6 +100,8 @@
     var hankakuFlg = 0;
     var bubunFlg = 0;
     var mode = "";
+    let illustId = "";
+    let utaNoInIllust = 0;
 
     if(urlParam) {
         // 「&」が含まれている場合は「&」で分割
@@ -155,8 +157,8 @@
             }
         }
     }
-    document.write("</tr></table>");
-
+    document.write("</tr>");
+	document.write("<td colspan=\"5\">　<a href='uta.html?fest=nicodosai_15th'>第15回東方ニコ童祭 半刻歌絵巻</a></td></tr></table>")
 
     // イラスト一覧リンクを表示する。
     document.write("<h2>イラスト一覧はこちらから</h2>")
@@ -203,13 +205,19 @@
             }else{
                 tmpselected = "";
             }
-            document.write("<option " + tmpselected + "value='" + festnames[i] + "'>東方ニコ楽祭・" + festinfo[festnames[i]][1] +"</option>");
-        }
-    }
-    document.write("</td></tr>");
+			document.write("<option " + tmpselected + "value='" + festnames[i] + "'>東方ニコ楽祭・" + festinfo[festnames[i]][1] +"</option>");
+		}
+	}
+	if("nicodosai_15th"==fest[0]){
+		tmpselected = "selected ";
+	}else{
+		tmpselected = "";
+	}
+	document.write("<option " + tmpselected + "value='nicodosai_15th'>第15回東方ニコ童祭 半刻歌絵巻</option>");
+	document.write("</td></tr>");
     //イラスト指定を表示する
     document.write("<tr><td align='center'>イラスト指定</td><td>");
-    document.write("<input type='text' name='illust' maxlength='10' value='");
+    document.write("<input type='text' name='illust' maxlength='15' value='");
     if(paramIllust.length>2){
         document.write(paramIllust + "'></td></tr>");
     }else{
@@ -235,6 +243,17 @@
         fest = festnames;
     }
     // URLにパラメータが存在する場合
+	if(fest[0]=="nicodosai_15th"){
+		document.write("<h2>第15回東方ニコ童祭 真剣お絵描き&MMD 60分一本勝負 半刻歌絵巻</h2>");
+		document.write("<p>真剣お絵描き&MMD 60分一本勝負 半刻歌絵巻は、第15回東方ニコ童祭の生放送企画です。<br>");
+		document.write("本企画は、事前にご応募頂いた歌から当日の生放送で抽選で季節ごとに1つの歌を選出し、その歌をお題として1時間でイラストを作成するというものでした。</p>");
+		document.write("<p>本ページでは、ご応募頂いた歌を掲載しております。</p>");
+		document.write("<p>企画の詳細につきましては、下記をご参照ください。<br>");
+		document.write("🔗<a href=\"https://nicodosai.com/15th/live/one\">第15回東方ニコ童祭特設Webサイト_半刻歌絵巻</a></p>");
+		document.write("<p>掲載の取り下げのご希望などがございましたら、お手数をおかけいたしますが、下記より東方ニコ童祭運営までご連絡お願いいたします。<br>");
+		document.write("🔗<a href=\"https://nicodosai.com/15th/etc/address\">第15回東方ニコ童祭特設Webサイト_お問い合わせ</a></p><br>");
+	}
+
     if(mode.length>0){
         if(mode=="illustlist"){
             document.write("<h2>イラスト一覧</h2>");
@@ -300,10 +319,19 @@
             }
         }
     }else if(urlParam.length>0){
+        if(paramIllust.indexOf('_') != -1){
+            let tmpArray = paramIllust.split('_');
+            illustId = tmpArray[0];
+            utaNoInIllust = String(tmpArray[1]);
+        }else{
+            illustId = paramIllust;
+            utaNoInIllust = -1;
+        }
         for(j=0;j<fest.length;j++){
             utaCount = 0;
+            utaCountInIllust = 1;
             var array = loadFile(festinfo[fest[j]][0]);
-            for(i=0; i<utaCount; i++){
+			for(i=0; i<utaCount; i++){
                 var tmpuser=false;
                 if(bubunFlg==1){
                     if(hankakuFlg==1&&usernameRegex.test(toHankaku(array[i][4]))){
@@ -318,21 +346,39 @@
                     }
                 }
 
-                if((userName.length==0 || array[i][4].trim() == userName || tmpuser) && (paramIllust.length<3 || array[i][0] == paramIllust)){
+                if((userName.length==0 || array[i][4].trim() == userName || tmpuser) && (illustId.length<3 || array[i][0] == illustId)){
                     if(array[i][0] != printedIllust){   //前に表示したイラストと異なる場合のみイラスト情報を表示する。
-                        imgiframe = "<table border='2' rules='all'><tr><td width='314' rowspan='4'><iframe width='312' height=\"176\" src=\"https://ext.seiga.nicovideo.jp/thumb/"+ array[i][0] +"\" scrolling=\"no\" style=\"border:solid 1px #888;\" frameborder=\"0\"><a href=\"https://seiga.nicovideo.jp/seiga/"+ array[i][0] +"\"> " + array[i][1] + "</a></iframe>";
-                        imginfo = "<td width='300'><font size='3'><a href='uta.html?illust=" + array[i][0] + "'>このイラストの歌をもっと見る</a></font></td></tr>";
-                        imginfo = imginfo + "<tr><td>東方ニコ楽祭・"+array[i][5]+"</td></tr><tr><td>★お題<br>"+array[i][7]+"</td></tr><tr><td>★連歌<br>"+array[i][8]+"</td></tr>";
-                        document.write(imgiframe+imginfo);
-                        
-                        printedIllust = array[i][0];
+						if(array[i][0].slice(0,2)=="im"){
+							imgiframe = "<table border='2' rules='all'><tr><td width='314' rowspan='4'><iframe width='312' height=\"176\" src=\"https://ext.seiga.nicovideo.jp/thumb/"+ array[i][0] +"\" scrolling=\"no\" style=\"border:solid 1px #888;\" frameborder=\"0\"><a href=\"https://seiga.nicovideo.jp/seiga/"+ array[i][0] +"\"> " + array[i][1] + "</a></iframe>";
+							imginfo = "<td width='300'><font size='3'><a href='uta.html?illust=" + array[i][0] + "'>このイラストの歌をもっと見る</a></font></td></tr>";
+							imginfo = imginfo + "<tr><td>東方ニコ楽祭・"+array[i][5]+"</td></tr><tr><td>★お題<br>"+array[i][7]+"</td></tr><tr><td>★連歌<br>"+array[i][8]+"</td></tr>";
+							document.write(imgiframe+imginfo);
+							printedIllust = array[i][0];
+							utaCountInIllust = 1;
+						}else{
+							document.write("<h2>お題："+array[i][0]+"</h2>");
+							printedIllust = array[i][0];
+							utaCountInIllust = 1;
+						}
+                    }else{
+                        utaCountInIllust++;
                     }
-                    document.write("<table width='560' border='3' rules='none' bgcolor='ivory'><body text='#000000'><p align='center'>");
-                    document.write("<tr><td align=left>　" + array[i][2] + "</td></tr>");
-                    document.write("<tr><td align=center>" + array[i][3] + "</td></tr>");
-                    document.write("<tr><td align=right>" + array[i][4] + "　</td></tr></table>");
 
-                    document.write("<p><font size='3'><a href='uta.html?user=" + encodeURI(array[i][4]) + "'>この詠み手の歌をもっと見る</a></font></p><br><br>");
+                    if(utaNoInIllust==-1 || utaCountInIllust == utaNoInIllust){
+                        document.write("<table width='560' border='3' rules='none' bgcolor='ivory'><body text='#000000'><p align='center'>");
+                        document.write("<tr><td align=left>　" + array[i][2] + "</td></tr>");
+                        document.write("<tr><td align=center>" + array[i][3] + "</td></tr>");
+                        document.write("<tr><td align=right>" + array[i][4] + "　</td></tr></table>");
+
+						if(array[i][6]!="nicodosai_15th"){
+	                        document.write("<p><font size='3'><a href='uta.html?user=" + encodeURI(array[i][4]) + "'>この詠み手の歌をもっと見る</a></font></p><br>");
+						}else{
+	                        document.write("<p><font size='3'><a href='uta.html?fest=nicodosai_15th&user=" + encodeURI(array[i][4]) + "'>この企画の同じ詠み手の歌をもっと見る</a></font></p><br>");
+						}
+					}
+                    if(utaCountInIllust == utaNoInIllust){
+                        break;
+                    }
                     allCount = allCount + 1;
                 }
             }
