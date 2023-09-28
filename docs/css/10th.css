@@ -14,6 +14,12 @@ h1 {
 	font-size: xx-large;
 }
 
+@media screen and (max-width:500px) {
+	h1{
+		font-size:x-large;
+	}	
+}
+
 div.makimono3 h1 {
 	margin:0;
 	text-align: center;

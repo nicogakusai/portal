@@ -28,7 +28,7 @@ h2:before,h3:before {
 table.uta{
 	margin-top:10px;
 	width:560;
-	border:3;
+	border:3 solid #000000;
 	background-color: ivory;
 }
 
@@ -55,8 +55,8 @@ body{
 }
 
 table{
-		font-family:'Noto Serif JP',serif;
-	}
+	font-family:'Noto Serif JP',serif;
+}
 	
 
 h1{
