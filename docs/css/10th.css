@@ -14,12 +14,6 @@ h1 {
 	font-size: xx-large;
 }
 
-@media screen and (max-width:500px) {
-	h1{
-		font-size:x-large;
-	}	
-}
-
 div.makimono3 h1 {
 	margin:0;
 	text-align: center;
@@ -463,10 +457,17 @@ h1.makimono{
 	vertical-align: middle;
 	font-family: 'Zen Antique', serif;
 	font-weight: 600;
-	font-size: 40;
+	font-size: xx-large;
 	color: #000000;
 	z-index: 10;
 }
+
+@media screen and (max-width:500px) {
+	h1.makimono{
+		font-size:x-large;
+	}	
+}
+
 
 div.makimonoShadow{
 	position:absolute;
