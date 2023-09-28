@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+	<!-- ページの設定 -->
+	<link rel="icon" href="parts/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="parts/appicon.png">
+	<meta name="theme-color" content="#ffccdd">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="”keywords”" content="”東方ニコ楽祭,東方,東方Project,東方自作アレンジ”">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- スタイルシートの読み込み -->
+	<link rel="stylesheet" href="./css/main.css" type="text/css">
+	<link rel="stylesheet" href="./css/menu2023.css" type="text/css">
+	<link rel="stylesheet" href="./css/top_uta.css" type="text/css">
+
+	<!-- フォント読み込み(Googleフォント) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@700&display=swap" rel="stylesheet">
+
+	<!-- Twitterカードの設定 -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@nicogakusai" />
+	<meta property="og:url" content="https://nicogakusai.github.io/portal/" />
+	<meta property="og:title" content="東方ニコ楽祭 トップページ" />
+	<meta property="og:description" content="niconico上で行われる、有志による東方Projectのお祭り企画、東方ニコ楽祭のウェブサイトです。" />
+	<meta property="og:image" content="https://nicogakusai.github.io/portal/parts/twitter-card.png" /> 
+
+	<!-- ページタイトル -->
+	<title>ページタイトルを記入する</title>
+
+</head>
+
+<header id="header_menu"></header>
+
+<body>
+	<!-- 一番上に歌を表示する場合は、javascript2つを用意する。 -->
+	<!-- 歌不要の場合は、下記の表記を消してください。 -->
+	<div class="top_group">
+		<img class="top_img" src="parts/top/8398585.png"> <!-- イラストが固定の場合はこっち -->
+		<script src="./js/template_top_illust.js"></script> <!-- イラストのランダム表示のときはこっち -->
+		<script src="./js/template_top_uta.js"></script> <!-- 歌のランダム表示。 -->
+	</div>
+
+	<div class="mainContents">
+		<!-- 見出しはロゴがあるかないかで使用するものを変える。不要な方は削除する -->
+
+		<!-- ロゴなしの場合＿ここから（見出しテキストのみ） -->
+		<h1>ページタイトルを記入する</h1> <!--タイトル-->
+		<!-- ロゴなしの場合＿ここまで（見出しテキストのみ） -->
+
+		<!-- ロゴありの場合＿ここから -->
+		<div class="h1_logo">
+			<img src="./parts/8402189.png"> <!--ロゴ画像-->
+			<h1>ページタイトルを記入する</h1> <!--タイトル-->
+		</div>
+		<!-- ロゴありの場合＿ここまで -->
+
+
+		<!-- 凡例 -->
+		<h2>見出し</h2>
+		<h3>小見出し</h3>
+		<h4>更に小見出し</h4>
+		<p>段落テキスト</p>
+		<p>段落テキスト</p>
+
+
+	</div>
+	<div id="footer"></div>
+	<script src="./js/include_menu.js"></script>
+</body>
+</html>

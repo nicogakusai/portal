@@ -1,0 +1,73 @@
+/* 背景 */
+/* 繰り返し(パターン素材)の背景を置く */
+/* https://bg-patterns.com/ */
+body {
+	background-image: url("../parts/plan/plan_bg.jpg");
+	background-position:center center; 
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-size: 200px;
+	margin-top:50px;
+}
+
+/* 見出しの設定 */
+h1,h2,h3{
+	color: #aa0000;/*文字色*/
+}
+
+/* h2（見出し）、h3（小見出し）の手前のアイコンの設定*/
+/* 標準は音符 */
+/* Googleのマテリアルフォントから指定する。 */
+
+h2:before,h3:before {
+	content: 'music_note';
+	top: 3px;
+}
+
+div.fest{
+	margin-top:3rem;
+	margin-bottom: 2rem;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap; 
+	align-items:center;
+}
+
+div.fest img{
+	width:150px;
+}
+
+div.textarea{
+	display: inline-block;
+	width:calc(100% - 150px - 2rem);
+	height:auto;
+	margin-top:auto;
+	margin-bottom: auto;
+}
+
+div.textarea h2{
+	padding-top:0px;
+}
+
+p.column1{
+	width:3em;
+	margin-left:1em;
+	margin-right:0px;
+}
+p.column2{
+	width:calc(100% - 4em);
+	margin-left:0px;
+	margin-right:0px;
+}
+
+div.textarea a{
+	margin-left: 1em;
+}
+
+
+@media screen and (max-width:34rem){
+	div.textarea{
+		width:100%;
+	}
+}

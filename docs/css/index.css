@@ -1,0 +1,127 @@
+/* 背景 */
+body {
+	background-image: url("../parts/index/index_bg.png");
+	background-position:center center; 
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-size: 200px;
+	margin-top:50px;
+}
+
+/* 見出しの設定 */
+h1,h2,h3{
+	color: #aa0000;/*文字色*/
+}
+
+/* h2（見出し）、h3（小見出し）の手前のアイコンの設定*/
+/* 標準は音符 */
+
+h2:before,h3:before {
+	content: 'music_note';
+	top: 3px;
+}
+
+div.mainContents{
+	padding-top: 0px;
+	margin-top: 40px;
+	border-radius: 40px;
+	border: #ffc0c0 solid 10px;
+}
+
+div.top_group{
+	border-radius: 40px;
+	border-top: #ffc0c0 solid 10px;
+	border-bottom: #ffc0c0 solid 10px;
+}
+
+h2{
+	padding-top: 20px;
+}
+
+div.siteContents{
+	display: block;
+	position:relative;
+	background-color: #ffcccc;
+	border-radius: 10px;
+	margin-right:20px;
+	margin-bottom:20px;
+	border:#aa0000 solid 3px;
+	width:400px;
+	height: 90px;
+	max-width:400px;
+	max-height: 90px;
+
+}
+
+div.siteContents a{
+	display: block;
+	position:relative;
+	text-decoration: none;
+	color: #cc0000;
+	max-height: 90px;
+}
+
+div.siteContents a::before{
+	font-style: normal;
+	display: block;
+	content: " ";
+	font-size: 70px;
+	font-family: "Material Icons";
+	position: relative;
+	top:8px;
+	left:8px;
+	max-height: 90px;
+	max-width:1em;
+}
+
+div.siteContents a p{
+	color: #000000;
+	font-size: small;
+	position:relative;
+	top:-72px;
+	padding-left: 80px;
+	margin-right: 10px;
+	max-height: 90px;
+}
+
+div.siteContents a h2{
+	color: #cc0000;
+	font-size: x-large;
+	position:relative;
+	top:-72px;
+	padding:0;
+	padding-left:85px;
+}
+
+div.siteContents a h2::before{
+	content:none;
+}
+
+div.siteContents a.sc_about::before{
+	content:"help"
+}
+
+div.siteContents a.sc_projects::before{
+	content:"music_note"
+}
+
+div.siteContents a.sc_link::before{
+	content:"insert_link"
+}
+
+div.siteContents a.sc_contact::before{
+	content:"mail"
+}
+
+div.siteContents a.sc_news::before{
+	content:"feed"
+}
+
+div.siteContents a.sc_uta::before{
+	content:"brush"
+}
+
+div.siteContents:hover{
+	background-color: #ffd060;
+}

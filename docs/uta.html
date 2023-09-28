@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="menu.css" type="text/css">
     <link rel="icon" href="parts/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="parts/appicon.png">
-
-
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@nicogakusai" />
     <meta property="og:url" content="https://nicogakusai.github.io/portal/uta.html" />
@@ -13,52 +11,27 @@
     <meta property="og:description" content="niconico上で行われる、有志による東方Projectのお祭り企画、東方ニコ楽祭のウェブサイトです。" />
     <meta property="og:image" content="https://nicogakusai.github.io/portal/parts/twitter-card.png" /> 
 
-<style>
-    p{font-family:'Noto Serif JP',serif;}
-    body{
-        font-family:'Noto Serif JP',serif;
-        -webkit-text-size-adjust: 100%;
-        background: linear-gradient(180deg, #ffeeee,white);
-    }
-</style>
+	<link rel="stylesheet" href="./css/main.css" type="text/css">
+	<link rel="stylesheet" href="./css/menu2023.css" type="text/css">
+	<link rel="stylesheet" href="./css/uta.css" type="text/css">
+
+	<!-- フォント読み込み(Googleフォント) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@700&display=swap" rel="stylesheet">
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>東方ニコ楽祭 イラスト・歌詠み一覧</title>
 
-<p align="center">
-<table width="100%">
-
-	<ul class="ddmenu">
-		<li><a href="index.html" target="_parent">トップページ</a></li>
-		<li><a href="about.html" target="_parent">東方ニコ楽祭について</a>
-		</li>
-		<li><a href="plan.html" target="_parent">企画詳細</a>
-			<ul>
-				<li><a href="tukimi.html" target="_parent">第１回　東方ニコ楽祭・月見</a></li>
-				<li><a href="hanami.html" target="_parent">第２回　東方ニコ楽祭・花見</a></li>
-				<li><a href="gassaku.html" target="_parent">第３回　東方ニコ楽祭・合作</a></li>
-                <li><a href="syuen.html" target="_parent">第４回　東方ニコ楽祭・酒宴</a></li>
-                <li><a href="kaikou.html" target="_parent">第５回　東方ニコ楽祭・邂逅</a></li>
-				<li><a href="gassaku2020.html" target="_parent">第６回　東方ニコ楽祭・合作</a></li>
-				<li><a href="sinsyun.html" target="_parent">第７回　東方ニコ楽祭・新春</a></li>
-                <li><a href="zyoukan.html" target="_parent">第８回　東方ニコ楽祭・情感</a></li>
-		<li><a href="8.5_ogiri2.html" target="_parent">第二回幻想コメント大賞</a></li>
-		<li><a href="9_sijinn.html" target="_parent">第９回　東方ニコ楽祭・思人</a></li>
-        <li><a href="10_utsushiyo.html" target="_parent">第10回　東方ニコ楽祭・現世</a></li>
-
-		<li><a href="11_saimatsu.html" target="_parent">第11回　東方ニコ楽祭・歳末</a></li>
-                <li><a href="uta.html" target="_parent">東方ニコ楽祭　全歌詠み一覧</a></li>
-			</ul>
-		</li>
-		<li><a href="link.html" target="_parent">リンク</a>
-		</li>
-		<li><a href="contact.html" target="_parent">お問い合わせ</a>
-		</li>
-	</ul>
-
-</table></p>
-
 </head>
+
+<header id="header_menu"></header>
+
 <body>
+	<div class="mainContents">
     <div id="head"><h1>東方ニコ楽祭　イラスト・歌詠み一覧</h1></div>
 <script type="text/javascript">
 
@@ -365,7 +338,7 @@
                     }
 
                     if(utaNoInIllust==-1 || utaCountInIllust == utaNoInIllust){
-                        document.write("<table width='560' border='3' rules='none' bgcolor='ivory'><body text='#000000'><p align='center'>");
+                        document.write("<table class='uta' rules='none'><body text='#000000'><p align='center'>");
                         document.write("<tr><td align=left>　" + array[i][2] + "</td></tr>");
                         document.write("<tr><td align=center>" + array[i][3] + "</td></tr>");
                         document.write("<tr><td align=right>" + array[i][4] + "　</td></tr></table>");
@@ -433,5 +406,8 @@
     }
 
 </script>
+<script src="./js/include_menu.js"></script>
+
 <p><a href="#head">一番上へ戻る</a></p>
+</div>
 </body></html>

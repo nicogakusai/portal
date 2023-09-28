@@ -1,140 +1,798 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head>
+<html>
+	<head>
+		<!--貂明朝読み込み-->
+		<script>
+			(function(d) {
+			var config = {
+				kitId: 'rjg8dvt',
+				scriptTimeout: 3000,
+				async: true
+			},
+			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
-
-
-<link rel="icon" href="parts/favicon.ico"/>
-<link rel="apple-touch-icon" sizes="180x180" href="parts/appicon.png">
-<link rel="stylesheet" href="css/main.css" type="text/css">
-<link rel="stylesheet" href="css/10th.css" type="text/css">
-<meta name="theme-color" content="#ffccdd">
-<meta name="viewport" content="width=device-width">
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@nicogakusai" />
-<meta property="og:url" content="https://nicogakusai.github.io/portal/10_utsushiyo.html" />
-<meta property="og:title" content="東方ニコ楽祭・現世 - 東方ニコ楽祭 website" />
-<meta property="og:description" content="ニコニコ上で行われる、有志による東方Projectのお祭り企画、東方ニコ楽祭のウェブサイトです。" />
-<meta property="og:image" content="https://nicogakusai.github.io/portal/parts/twitter-card.png" /> 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>東方ニコ楽祭・現世</title>
+		<link rel="icon" href="parts/favicon.ico"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="parts/appicon.png">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="./css/menu2023.css" type="text/css">
+		<link rel="stylesheet" href="css/10th.css" type="text/css">
+		<meta name="theme-color" content="#ffccdd">
+		<meta name="viewport" content="width=device-width">
 
-  <p align="center">
-  <table width="100%">
-    <ul class="ddmenu">
-      <li><a href="index.html" target="_parent">トップページ</a></li>
-      <li><a href="about.html" target="_parent">東方ニコ楽祭について</a>
-      </li>
-      <li><a href="plan.html" target="_parent">企画詳細</a>
-        <ul>
-          <li><a href="tukimi.html" target="_parent">第１回　東方ニコ楽祭・月見</a></li>
-          <li><a href="hanami.html" target="_parent">第２回　東方ニコ楽祭・花見</a></li>
-          <li><a href="gassaku.html" target="_parent">第３回　東方ニコ楽祭・合作</a></li>
-          <li><a href="syuen.html" target="_parent">第４回　東方ニコ楽祭・酒宴</a></li>
-          <li><a href="kaikou.html" target="_parent">第５回　東方ニコ楽祭・邂逅</a></li>
-          <li><a href="gassaku2020.html" target="_parent">第６回　東方ニコ楽祭・合作</a></li>
-          <li><a href="sinsyun.html" target="_parent">第７回　東方ニコ楽祭・新春</a></li>
-          <li><a href="zyoukan.html" target="_parent">第８回　東方ニコ楽祭・情感</a></li>
-          <li><a href="8.5_ogiri2.html" target="_parent">第二回幻想コメント大賞</a></li>
-          <li><a href="9_sijinn.html" target="_parent">第９回　東方ニコ楽祭・思人</a></li>
-          <li><a href="10_utsushiyo.html" target="_parent">第10回　東方ニコ楽祭・現世</a></li>
-          <li><a href="11_saimatsu.html" target="_parent">第11回　東方ニコ楽祭・歳末</a></li>
-          <li><a href="uta.html" target="_parent">東方ニコ楽祭　全歌詠み一覧</a></li>
-        </ul>
-      </li>
-      <li><a href="link.html" target="_parent">リンク</a>
-      </li>
-      <li><a href="contact.html" target="_parent">お問い合わせ</a>
-      </li>
-    </ul>
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@nicogakusai" />
+		<meta property="og:url" content="https://nicogakusai.github.io/portal/10_utsushiyo.html" />
+		<meta property="og:title" content="東方ニコ楽祭・現世 - 東方ニコ楽祭 website" />
+		<meta property="og:description" content="ニコニコ上で行われる、有志による東方Projectのお祭り企画、東方ニコ楽祭のウェブサイトです。" />
+		<meta property="og:image" content="https://nicogakusai.github.io/portal/parts/twitter-card.png" /> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>東方ニコ楽祭・現世</title>
+	</head>
 
-  </table></p>
-</head>
-
+	<header id="header_menu"></header>
 
 <body>
-  <div class="mainContents">
-    <h1>東方ニコ楽祭・現世</h1>
-    <h2>企画内容</h2>
-    <p>2023年秋の東方紅楼夢、博麗神社秋季例大祭にてみんなで作ったコンピレーション・アルバムを頒布するプロジェクトです。</p>
-    <p>さらに、同梱するブックレットには、手書きのイラスト＋歌を掲載します。</p>
-    <div class="concept">
-      <h3>コンセプト</h3>
-      <p>幻想郷の一年、その折々の音楽を、風景を、心情を、形にし、集め、積み重ねる……。</p>
-      <p>1年つまり12ヵ月（1月～12月）を参加者の皆様に割り振り、その月をテーマに作品をご制作頂きます。</p>
-    </div>
+	
+	<div class="makimono">
+		<div class="makimono1"></div>
+		<div class="makimono2"></div>
+		<div class="makimono3">
+			<h1 class="makimono">東方ニコ楽祭・現世</h1>
+		</div>
+	</div>
+	<div class="makimonoShadow"></div>
+	<div class="mainContents" id="mainContents">
+		<div class="flex">
+			<div class="topImg">
+				<img src="./parts/10th/hyoushi.jpg">
+				<p>表紙イラスト：座にか　ロゴ：蒼青</p>
+			</div>
+			<div class="topContents">
+				<img src="./parts/10th/10th_logo.png">
+				<h2 class="top">企画内容</h2>
+				<p>2023年秋の東方紅楼夢、博麗神社秋季例大祭にてみんなで作ったコンピレーション・アルバムを頒布するプロジェクトです。</p>
+				<p>さらに、同梱するブックレットには、手書きのイラストと歌を掲載します。</p>
+				<h2 class="topEvent">頒布イベント</h2>
+				<h3 class="topEventName">第19回東方紅楼夢（大阪）</h3>
+				<p>2023年10月15日開催</p>
+				<p>スペース：お-15a（6C）</p>
+				<h3 class="topEventName">第十回博麗神社秋季例大祭（東京）</h3>
+				<p>2023年11月12日開催</p>
+				<p>スペース：</p>
+				<h2>イベント頒布価格</h2>
+				<p>2,500円</p>
+			</div>
+		</div>
+		<div class="concept">
+			<h3>企画コンセプト</h3>
+			<p>幻想郷の一年、その折々の音楽を、風景を、心情を、形にし、集め、積み重ねる……。</p>
+			<p>1年つまり12ヵ月（1月～12月）を参加者に割り振り、その月をテーマとした作品をみんなで作りました。</p>
+		</div>
 
-    <h2>お知らせ</h2>
-    <p>2023/3/16<br>参加者の募集を終了しました。たくさんのご登録ありがとうございました。登録頂いた方には随時ご連絡いたします。</p>
-    <p>2023/2/24<br>参加者の募集を3/15まで延長しました。ぜひご登録ください。</p>
+		<h2>お知らせ</h2>
+		<p>2023/9/29<br>ページをリニューアルしました。頒布作品、頒布に関する情報を掲載しました。</p>
+		<p>2023/3/16<br>参加者の募集を終了しました。たくさんのご登録ありがとうございました。登録頂いた方には随時ご連絡いたします。</p>
+		<p>2023/2/24<br>参加者の募集を3/15まで延長しました。ぜひご登録ください。</p>
 
+		<h2>収録内容</h2>
+		<h3>アレンジCD</h3>
+		<p>CD3枚組、合計36曲の超ボリューム！</p>
+		<div class="flex">
+			<table class="contents">
+				<tr>
+					<th colspan="2">Disk 1</th>
+				</tr>
+				<tr>
+					<th>1月</th>
+					<td>mixtuti桜餅
+					<div class="flex">
+						<p class="musicItem">曲名：</p>
+						<p class="musicInfo">季節は移ろゐ、そして狭間へ</p>
+					</div>
+					
+					<div class="flex">
+						<p class="musicItem">原曲：</p>
+						<p class="musicInfo">秘匿されたフォーシーズンズ<br>
+						ネクロファンタジア</p>
+					</div>
+				</td>
+				</tr>
+				<tr>
+					<th>2月</th>
+					<td>Artemis
+					<div class="flex">
+						<p class="musicItem">曲名：</p>
+						<p class="musicInfo">KISARAGI Spring</p>
+					</div>
+					
+					<div class="flex">
+						<p class="musicItem">原曲：</p>
+						<p class="musicInfo">
+							砕月
+						</p>
+					</div>
+				</td>
+				</tr>
+				<tr>
+					<th>3月</th>
+					<td>REEYA
+					<div class="flex">
+						<p class="musicItem">曲名：</p>
+						<p class="musicInfo">Herald the Springtime</p>
+					</div>
+					
+					<div class="flex">
+						<p class="musicItem">原曲：</p>
+						<p class="musicInfo">
+							天空の花の都
+						</p>
+					</div>
+				</td>
+				</tr>
+				<tr>
+					<th>4月</th>
+					<td>Cadence
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">陽春</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								他愛も無い二人の博物誌<br>
+								彼岸帰航　～ Riverside View
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>5月</th>
+					<td>稗田阿樹
+					<div class="flex">
+						<p class="musicItem">曲名：</p>
+						<p class="musicInfo">Girl's Banter</p>
+					</div>
+					
+					<div class="flex">
+						<p class="musicItem">原曲：</p>
+						<p class="musicInfo">
+							少女綺想曲　～ Dream Battle<br>
+							少女綺想曲　～ Capriccio
+						</p>
+					</div>
+				</td>
+				</tr>
 
-    <h2>参加方法・詳細</h2>
-    <p>参加方法は、「アレンジ楽曲部門」「イラスト部門」「歌詠み部門」で異なります。</p>
-    <p>それぞれの参加方法は、以下のボタンのリンク先よりご確認ください。</p>
-    <p><a href="10_utsushiyo/arrange.html"><button>♫　アレンジ楽曲部門</button></a></p>
-    <p><a href="10_utsushiyo/illust.html"><button>✎ 手書きイラスト部門</button></a></p>
-    <p><a href="10_utsushiyo/uta.html"><button>✒ 歌詠み部門</button></a></p>
+				<tr>
+					<th>6月</th>
+					<td>まつば
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Gift</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">厄神様の通り道 ～ Dark Road</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>7月</th>
+					<td>MTK
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Sunlight drive</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">デザイアドライブ</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>8月</th>
+					<td>うま
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">あの日追いかけた風</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								希望の星は青霄に昇る
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>9月</th>
+					<td>天雨ネクスト
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">秋風</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">妖怪の山　～ Mysterious Mountain
+								
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>10月</th>
+					<td>如水
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">KNOCK OUT</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								フォールオブフォール　～ 秋めく滝
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>11月</th>
+					<td>Ar ka Eruna（アルカエルナ）
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">雪を待つ月</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								アリスマエステラ
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>12月</th>
+					<td>長曽根
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Romantic Children</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								Romantic Children
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
 
-    <h2>告知動画</h2>
-    <div class="douga">
-      <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm41507772/script?w=640&h=360"></script>
-      <noscript><a href="https://www.nicovideo.jp/watch/sm41507772">東方ニコ楽祭・現世 告知動画</a></noscript>
-    </div>
-    <h2>その他募集</h2>
-    <p>本企画の実施について、各種運営業務を行っていただく、PJメンバーも募集いたします！</p>
-    <p>PJメンバーの募集は終了しました、たくさんのご応募ありがとうございました。（2023/4/16更新）</p>
-    <h3>PJメンバー活動内容</h3>
-    <table class="spec">
-      <tr>
-        <th>活動概要</th>
-        <td>東方ニコ楽祭・現世の作品完成までの運営活動（裏方）など</td>
-      </tr>
-      <tr>
-        <th>活動期間</th>
-        <td>東方ニコ楽祭・現世の終了まで<br>2022年12月～2023年11月頃（予定）</td>
-      </tr>
-      <tr>
-        <th>活動内容</th>
-        <td>
-          <li>作品・頒布物の仕様の検討・決定（特にイラスト部門の仕様をこれから固めていきます。）</li>
-          <li>作品の受領・内容確認・その他相談の対応</li>
-          <li>参加者様の参加するサーバの運営業務</li>
-          <li>その他事務業務</li>
-          などなど。その時々により、必要な業務を行っていきます。
-        </td>
-      </tr>
-      <tr>
-        <th>活動場所</th>
-        <td>チャットツール（discord）上となります。<br>原則、テキストチャットで打ち合わせ等を行います。</td>
-      </tr>
-      <tr>
-        <th>その他</th>
-        <td>
-          <li>東方ニコ楽祭・現世の参加者とPJメンバーの両方でご応募いただくことも可能です。</li>
-          <li>報酬等はございません。</li>
-          <li>PJメンバーは応募頂いた方の全員の参加をお願いできない場合があります。</li>
-        </td>
-      </tr>
-    </table>
-    <h3>PJメンバー応募フォーム</h3>
-    <p>ご興味をお持ちの方は、以下の応募フォームよりご応募ください。</p>
-    <p><button class="close">🖂 PJメンバー応募フォーム</button></p>
-    <p>PJメンバーの募集は終了しました、たくさんのご応募ありがとうございました。（2023/4/16更新）</p>
+			<table class="contents">
+				<tr>
+					<th colspan="2">Disk 2</th>
+				</tr>
+				<tr>
+					<th>1月</th>
+					<td>北逸　レイ
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">欲望の途絶える橋</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								渡る者の途絶えた橋<br>
+								小さな欲望の星空
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>2月</th>
+					<td>如水
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Aggression</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								広有射怪鳥事　～ Till When?
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>3月</th>
+					<td>MTK
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Shimmering Cherry</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								さくらさくら　～Japanaize Dream...
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>4月</th>
+					<td>ラウ(RoundLoudness)
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">幻視の夜　～ Atropos Eyes</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								幻視の夜 ～ Ghostly Eyes
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>5月</th>
+					<td>箱_FUJ850
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">SAKURA-LIVING-DEAD</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								幽雅に咲かせ、墨染の桜　～ Border of Life<br>
+								ボーダーオブライフ<br>
+								広有射怪鳥事　～ Till When？<br>
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>6月</th>
+					<td>Artemis
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">To You</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								明日ハレの日、ケの昨日<br>
+								ネイティブフェイス
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>7月</th>
+					<td>N-Driver
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">R1N</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								死体旅行　〜 Be of good cheer!
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>8月</th>
+					<td>REEYA
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Mysterium</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								竹取飛翔　～ Lunatic Princess
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>9月</th>
+					<td>mixtuti桜餅
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">純粋な殺意は長月の夜に浮かぶ(Short ver)</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								ピュアヒューリーズ　〜 心の在処
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>10月</th>
+					<td>ひみのゆり
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">夜駆ケル天狗ノ杜</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								夜の鳩山を飛ぶ<br>
+								星降る天魔の山<br>
+								フォールオブフォール　～ 秋めく滝<br>
+								妖怪モダンコロニー<br>
+								レトロスペクティブ京都<br>
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>11月</th>
+					<td>SABA
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">天照</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								霊知の太陽信仰　～ Nuclear Fusion
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>12月</th>
+					<td>天雨ネクスト
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">銀世界</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								阿礼の子供<br>
+								判読眼のビブロフィリア
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
 
-  </div>
-  <h2 class="under">更新情報・Twitter</h2>
-  <div class="under">
-    <iframe src="renew.html" frameborder="1" height="300px" width="100%" name="renew" scrolling="yes" align="left">インフレームを使っています。未対応のブラウザをお使いの方は<a href="renew.html">更新情報</a>からどうぞ。</iframe>
-  </div>
-  <div class="under">
-    <a class="twitter-timeline" href="https://twitter.com/nicogakusai?ref_src=twsrc%5Etfw" height="300px" width="100%">Tweets by nicogakusai</a> <script async charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
-  </div>
+			<table class="contents">
+				<tr>
+					<th colspan="2">Disk 3</th>
+				</tr>
+				<tr>
+					<th>1月</th>
+					<td>mixtuti桜餅
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">砕月(mixtuti mix)</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								砕月
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>2月</th>
+					<td>MTK
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">All night long</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								少女が見た日本の原風景
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>3月</th>
+					<td>めるみ～
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">戸びらを啓(ひら)いて</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								幻想のホワイトトラベラー<br>
+								白い旅人
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>4月</th>
+					<td>mixtuti桜餅
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">幻剣双桜(Short ver)</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								東方妖々夢　〜 Ancient Temple
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>5月</th>
+					<td>ラウ(RoundLoudness)
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">閉ざせし雲の通い路　〜 Reptile Road</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								閉ざせし雲の通い路
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>6月</th>
+					<td>稗田阿樹
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Squall of Apparition</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								万年置き傘にご注意を
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>7月</th>
+					<td>SABA
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">心象風景</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								神々が恋した幻想郷
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>8月</th>
+					<td>Artemis
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">Summer Day, Sunny Day (UTSUSHIYO Edit)</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								希望の星は青霄に昇る
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>9月</th>
+					<td>長曽根
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">聖徳伝説</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								聖徳伝説
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>10月</th>
+					<td>北逸　レイ
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">幻想の未来宇宙観測会</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								車椅子の未来宇宙<br>
+								東の国の眠らない夜<br>
+								天狗が見ている　～ Black Eyes<br>
+								星降る天魔の山
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>11月</th>
+					<td>mixtuti桜餅
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">故意と破壊の症候群</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								U.N.オーエンは彼女なのか？<br> 
+								紅楼　～ Eastern Dream...
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>12月</th>
+					<td>うま
+						<div class="flex">
+							<p class="musicItem">曲名：</p>
+							<p class="musicInfo">現世に萃まる夢と想い</p>
+						</div>
+						
+						<div class="flex">
+							<p class="musicItem">原曲：</p>
+							<p class="musicInfo">
+								砕月
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<h3>イラスト集（冊子）</h3>
+		<p>16枚のイラストと、イラストごとに1首の歌をお楽しみいただけます。</p>
+		<h4>イラスト</h4>
+		<div class="flex">
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0000.jpg">
+				<p>アジャストリーマ</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0001.jpg">
+				<p>しなびたこんにゃくん</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0002.jpg">
+				<p>Aneko3</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0003.jpg">
+				<p>裂空の中二病</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0004.jpg">
+				<p>九十九五十六</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0005.jpg">
+				<p>つきみメロン</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0006.jpg">
+				<p>自由突破</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0007.jpg">
+				<p>和風海苔</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0008.jpg">
+				<p>いぬたろう</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0009.jpg">
+				<p>自由突破</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0010.jpg">
+				<p>アジャストリーマ</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0011.jpg">
+				<p>かわハギ もどき</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0012.jpg">
+				<p>九十九五十六</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0013.jpg">
+				<p>和風海苔</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0014.jpg">
+				<p>Ar ka Eruna(アルカエルナ)</p>
+			</div>
+			<div class="imgContents">
+				<img src="./parts/10th/image/img_0015.jpg">
+				<p>いぬたろう</p>
+			</div>
+		</div>
+		<h4>歌詠み</h4>
+		<p>SABA</p>
+		<p>北逸　レイ</p>
+		<p>水鐘</p>
+		<p>ジュジュ</p>
+		<p>アジャストリーマ</p>
+		<p>和風海苔</p>
+
+		<h2>作品紹介動画（クロスフェード）</h2>
+		<div class="douga">
+			<script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm42816126/script?w=640&h=360"></script>
+			<noscript><a href="https://www.nicovideo.jp/watch/sm42816126">東方ニコ楽祭・現世 クロスフェード</a></noscript>
+		</div>
+		
+
+		<h2>告知動画</h2>
+		<div class="douga">
+		<script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm41507772/script?w=640&h=360"></script>
+		<noscript><a href="https://www.nicovideo.jp/watch/sm41507772">東方ニコ楽祭・現世 告知動画</a></noscript>
+		</div>
+
+		<h2>参加方法・募集詳細</h2>
+		<p>※参加受付は終了しております。</p>
+		<div class="flex">
+			<a href="10_utsushiyo/bosyu.html"><button>募集ページ</button></a>
+		</div>
+	</div>
+
+	<div id="footer"></div>
+	<script src="./js/include_menu.js"></script>
 
 </body>
+
 </html>

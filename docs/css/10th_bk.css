@@ -1,0 +1,312 @@
+
+body {
+	background-image: url("../parts/10th/10th_bg.svg");
+	background-size: 30%;
+	background-repeat: repeat;
+	background-position:center center; 
+	background-attachment: fixed;
+}
+
+h1 {
+	font-family: 'Zen Antique', serif;
+	border-bottom: 8px double #008000;
+	border-top: 8px solid #008000;
+	border-left: 10px double #008000;
+	border-right: 10px solid #008000;
+	background-color: #ffffff;
+	color: #008000;/*文字色*/
+	padding: 0.2em;/*文字周りの余白*/
+	font-size: 50px;
+	text-align: center;
+}
+
+
+h2 {
+	color: #006000;/*文字色*/
+	font-family: 'Zen Antique', serif;
+	padding: 0.2em;/*文字周りの余白*/
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin:0px;
+	margin-top : 60px;
+}
+
+
+h2:before {
+	margin-right: 5px;
+	content: "♫";
+	position: relative;
+/*	top: 5px;*/
+	margin: 0 10px 0 0;
+}
+
+h3 {
+	color: #006000;/*文字色*/
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin:0px;
+}
+
+h4{
+	color: #006000;
+	font-style: bold;
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin:0px;
+}
+
+@media screen and (max-width:1080px){
+	h1 {
+		font-family: 'Zen Antique', serif;
+		border-bottom: 6px double #008000;
+		border-top: 6px solid #008000;
+		border-left: 8px double #008000;
+		border-right: 8px solid #008000;
+		background-color: #ffffff;
+		color: #006000;/*文字色*/
+		padding: 0px;/*文字周りの余白*/
+		font-size: 28px;
+		text-align: center;
+	}
+	h2{
+		font-size: 20px;
+	}
+	h3{
+		font-size:18px;
+	}
+}
+
+ol {
+	padding-left: 30px;
+	list-style-type: none;
+	counter-reset: list;
+}
+
+ol li{
+	position:relative;
+	padding-left: 0px;
+	border-bottom:solid 1px #008000;
+	padding-top: 10px;
+}
+
+ol li:before{
+	font-weight: bold;
+	color:#ffffff;
+	counter-increment: list;
+	content: counter(list);
+	margin-right: 10px;
+	padding-top:1px;
+	padding-bottom:1px;
+	padding-left:5px;
+	padding-right:5px;
+	background: #008000;
+}
+
+li{
+	padding-left: 2em;
+	text-indent: -1em;
+}
+
+@media screen and (max-width:1080px){
+	ol li{
+		border-bottom:none;
+	}
+}	
+
+ul li{
+	list-style-type: circle;
+	padding-left: 0px;
+	margin-left:20px;
+	text-indent:0.5em;
+}
+
+
+div.mainContents{
+	margin-top: 30px;
+	background:rgba(255,255,255,0.9);
+	border-left: 3px double #004000;
+	border-right: 3px double #004000;
+	border-top: 3px double #004000;
+	border-bottom: 3px double #004000;
+}
+
+div.concept{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-family: serif;
+	padding: 5px;
+	background:rgba(255,255,255,0.9);
+	border-left: 3px double #004000;
+	border-right: 3px double #004000;
+	border-top: 3px double #004000;
+	border-bottom: 3px double #004000;
+}
+
+div.inline{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	background:rgba(255,255,255,0.9);
+	border-left: 3px double #004000;
+	border-right: 3px double #004000;
+	border-top: 3px double #004000;
+	border-bottom: 3px double #004000;
+}
+
+button.close{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius:10px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-family: 'Zen Antique';
+	background-color:#a0a0a0;
+	color :#000000;
+}
+
+button.close:hover{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius:10px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-family: 'Zen Antique';
+	background-color:#a0a0a0;
+	color :#000000;
+}
+
+button{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius:10px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-family: 'Zen Antique';
+	background-color:#006000;
+	color :#ddffdd;
+}
+
+button:hover{
+	background-color:#ddffdd;
+	color: #006000;
+}
+
+table.spec{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #ddffdd;
+	border: none;	
+}
+
+table.spec th{
+	background-color: #004000;
+	color: #ffffff;
+	font-weight: bold;
+	padding-left:8px;
+	padding-right:8px;
+	border-style: solid 1px #004000;
+	margin: 0px;
+}
+
+table.spec td{
+	padding-left:8px;
+	padding-right:8px;
+	border: solid 1px #004000;
+	margin: 0px;
+
+}
+
+table.schedule{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #ddffdd;
+	border: none;	
+}
+
+table.schedule th{
+	background-color: #004000;
+	color: #ffffff;
+	font-weight: normal;
+	padding-left:8px;
+	padding-right:8px;
+	border-style: solid 1px #004000;
+	margin: 0px;
+	width:30%;
+}
+
+table.schedule td{
+	padding-left:8px;
+	padding-right:8px;
+	border: solid 1px #004000;
+	margin: 0px;
+	width:100%;
+}
+
+ul.ddmenu {
+	background:  #004000;		/* バーの背景色 */
+	border: 3px ridge #ddffdd;	/* メニューバーの枠線と色 */
+	margin : 0px;
+	padding: 0px;
+}
+/* メインメニュー項目の装飾 */
+ul.ddmenu a {
+	background-color: #004000;	/* メニュー項目の背景色 */
+	border-top: #ddffdd;	/* メニュー項目にマウスが載ったときの背景色 */
+	border: 3px ridge #ddffdd;	/* メニューバーの枠線と色 */
+}
+ul.ddmenu a:hover {
+	color: #004000;				/* メニュー項目にマウスが載ったときの文字色 */
+	background-color: #ddffdd;	/* メニュー項目にマウスが載ったときの背景色 */
+}
+
+ul.ddmenu li {
+	margin : 0px;
+	padding: 0px;
+}
+
+div.douga{
+	border: 15px solid;
+	border-color: #002000;
+	width:fit-content;
+}
+
+@media screen and (max-width:1199px){
+	ul.ddmenu li {
+		width: 100%;			/* メニュー項目の横幅 */
+		display: inline-block;	/* 横並びに配置する */
+		list-style-type: none;	/* リストの先頭記号を消す */
+		position: relative;		/* サブメニュー表示の基準位置にする */
+		padding-left:0px;
+		padding-right:0px;
+	}
+	
+	/* サブメニューがある場合に開く処理 */
+	ul.ddmenu li:hover ul {
+		display: none;		/* マウスポインタが載っている項目の内部にあるリストを表示する */
+	}
+	/* サブメニューの装飾 */
+	ul.ddmenu ul {
+		display: none;			/* 標準では非表示にする */
+	}
+
+	div.douga{
+		border: 5px solid;
+		border-color: #002000;
+		width: fit-content;
+		height: fit-content;
+	}
+	
+}

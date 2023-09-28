@@ -1,14 +1,82 @@
-ul{
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left :50px;
-	margin :0px;
+/* 標準設定 */
+body{
+	margin:0;
+}
+
+h1 {
+	padding: 0.5em;/*文字周りの余白*/
+	margin-top:1rem;
+	margin-bottom:1rem;
+	font-family: 'Kaisei Opti', serif;
+}
+
+div.h1_logo{
+	margin-top:3rem;
+	margin-bottom: 2rem;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap; 
+	align-items:center;
+}
+
+div.h1_logo img{
+	width:150px;
+}
+
+div.h1_logo h1{
+	display: inline-block;
+	width: calc(100% - 150px - 2rem);
+	height:auto;
+	margin-top:auto;
+	margin-bottom: auto;
+}
+
+@media screen and (max-width:500px){
+	div.h1_logo h1{
+		margin-top: 0;
+		padding-top: 0;
+		width: calc(100% - 2rem);
+	}	
+}
+
+h2 {
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 3rem;
+	padding-bottom: 0.5rem;
+	margin:0px;
+	font-family: 'Kaisei Opti', serif;
+}
+
+h3 {
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin:0px;
+	margin-top: 1rem;
+	font-family: 'Kaisei Opti', serif;
+}
+
+h2:before,h3:before {
+	margin-right: 5px;
+	font-family: "Material Icons";
+	content: 'music_note';
+	position: relative;
+	top: 3px;
+	margin: 0 2px 0 0;
+}
+
+h4 {
+	padding: 0.5em;/*文字周りの余白*/
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin:0px;
+	font-family: 'Kaisei Opti', serif;
 }
 
 div.mainContents{
 	margin-left: 10%;
 	margin-right: 10%;
-	background:rgba(255,255,255,0.6);
+	background:rgba(255,255,255,0.9);
 	padding-top: 50px;
 	padding-bottom: 50px;
 	padding-left: 50px;
@@ -28,18 +96,22 @@ li{
 }
 
 /*更新情報・Twitter用*/
-h2.under{
-	margin-top: 50px;
+h2.under,h2.under_mob{
+	display: block;
+	margin-top: 100px;
 	margin-bottom: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	text-align:center;
 	font-size: 20px;
 	background-color: rgba(255,255,255,0.9);
-	color: #000000;
 }
-h2.under:before{
+h2.under:before,h2.under_mob:before{
 	content:none;
+}
+
+h2.under_mob{
+	display:none;
 }
 
 @media screen and (min-width:801px){
@@ -50,115 +122,64 @@ h2.under:before{
 	}
 }
 
-@media screen and (max-width:800px){
-	div.under{
-		width:98%;
-		margin:1%;
-		float:none;
+@media screen and (max-width:1200px){ /*PCの狭め対応*/
+	div.mainContents{
+		margin-left:5%;
+		margin-right:5%;
 	}
 }
-
-/*メニューバー用*/
-
-ul.ddmenu {
-	position: relative;
-	z-index: 100;
-	margin: 0px;					/* メニューバー外側の余白 */
-	padding: 0px 0px 0px 15px;		/* メニューバー内側の余白 */
-	background:  #cc0000;		/* バーの背景色 */
-	border: 3px ridge #ffdddd;	/* メニューバーの枠線と色 */
-}
-/* メインメニュー項目の装飾 */
-ul.ddmenu a {
-	background-color: #cc0000;	/* メニュー項目の背景色 */
-	color: white;				/* メニュー項目の文字色 */
-	line-height: 40px;			/* メニュー項目のリンクの高さ */
-	text-align: center;			/* メインメニューの文字列の配置 */
-	text-decoration: none;		/* メニュー項目の装飾(下線を消す) */
-	font-weight: bold;			/* 太字にする */
-	display: block;				/* 項目内全域をリンク可能にする */
-	border: 1px ridge #ffdddd;	/* メニュー項目線 */
-}
-ul.ddmenu a:hover {
-	background-color: #ffdddd;	/* メニュー項目にマウスが載ったときの背景色 */
-	color: #dd0000;				/* メニュー項目にマウスが載ったときの文字色 */
-}
-
-/* 幅が狭いとき */
-@media screen and (max-width:1199px){
-ul.ddmenu li {
-	width: 100%;			/* メニュー項目の横幅 */
-	display: inline-block;	/* 横並びに配置する */
-	list-style-type: none;	/* リストの先頭記号を消す */
-	position: relative;		/* サブメニュー表示の基準位置にする */
-	padding-left:0px;
-	padding-right:0px;
-}
-
-/* サブメニューがある場合に開く処理 */
-ul.ddmenu li:hover ul {
-	display: none;		/* マウスポインタが載っている項目の内部にあるリストを表示する */
-}
-/* サブメニューの装飾 */
-ul.ddmenu ul {
-	display: none;			/* 標準では非表示にする */
-}
-}
-
-/* 幅が広いとき */
-@media screen and (min-width:1200px){
-	ul.ddmenu li {
-		width: 225px;			/* メニュー項目の横幅 */
-		display: inline-block;	/* 横並びに配置する */
-		list-style-type: none;	/* リストの先頭記号を消す */
-		position: relative;		/* サブメニュー表示の基準位置にする */
-		padding-left:0px;
-		padding-right:0px;
-	}
-}
-
-/* サブメニューがある場合に開く処理 */
-ul.ddmenu li:hover ul {
-	display: block;		/* マウスポインタが載っている項目の内部にあるリストを表示する */
-}
-/* サブメニューの装飾 */
-ul.ddmenu ul {
-	margin: 0px;			/* サブメニュー外側の余白 */
-	padding: 0px;			/* サブメニュー内側の余白 */
-	display: none;			/* 標準では非表示にする */
-	position: absolute;		/* 絶対配置にする */
-}
-/* サブメニュー項目の装飾 */
-ul.ddmenu ul li {
-	width: 250px;					/* サブメニュー1項目の横幅 */
-	border-top: 1px solid pink;		/* 項目上側の枠線(ピンク色で1pxの実線) */
-}
-
-ul.ddmenu ul li a {
-	line-height: 35px;		/* サブメニュー1項目の高さ */
-	text-align: left;		/* 文字列の配置 */
-	padding-left: 5px;		/* 文字列前方の余白 */
-	font-weight: normal;	/* 太字にはしない */
-	padding-left:0px;
-	padding-right:0px;
-}
-
-ul.ddmenu ul li a:hover {
-	background-color: #ffff80;	/* サブメニュー項目にマウスが載ったときの背景色 */
-	color: #005500;				/* サブメニュー項目にマウスが載ったときの文字色 */
-}
-
-
 
 @media screen and (max-width:800px){ /*モバイル対応*/
 	div.mainContents{
 		margin-left:0%;
 		margin-right:0%;
-		background:rgba(255,255,255,0.6);
 		padding-top: 20px;
 		padding-bottom: 20px;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+	div.under{
+		width:98%;
+		margin:1%;
+		float:none;
+	}
+	h2.under{
+		display:none;
+	}
+	h2.under_mob{
+		display:block;
+	}
+}
 
+/* 更新情報表示用 */
+table.renew td{
+	padding-right: 1em;
+	border-bottom: 1px solid #e0a0a0;
+}
+
+tr.renew_footer_only td{
+	padding-top:10px;
+	border-bottom:0px;
+}
+
+tr.renew_old{
+	display: none;
+}
+
+div.renew{
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right: 0px;
+	background-color: #ffeaea;
+	border-radius: 10px;
+	border: 1px solid #d00000;
+}
+
+/* 汎用パーツ */
+
+/* 並列表示用 */
+div.flex{
+	display: flex;
+	flex-wrap: wrap;
 }

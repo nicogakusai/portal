@@ -1,0 +1,374 @@
+/* 通常版メニュー */
+div.drawer{
+	visibility: hidden;
+}
+
+.drawer_hidden {
+	visibility: hidden;
+	margin:0;
+}
+  
+header{
+	margin-top:0;
+	padding:0;
+	position:fixed;
+	inset:0;
+	top:-0.5rem;
+	height:5rem;
+	background-color: #ffdddd;
+	z-index: 10;
+}
+
+div.header{
+	display:flex;
+	justify-content: space-between;
+    align-items: center;
+	width:50rem;
+	margin:auto;
+	margin-top:0;
+}
+
+li.header_menu{
+	padding:0;
+	list-style: none;
+	margin: auto;
+	height: 3.6rem;
+	width: 5rem;
+	background-color:#cc0000;
+	border-radius: 0.4rem;
+	margin-top:0;
+}
+
+li.header_menu a{
+	text-decoration: none;
+	display: block;
+    position: relative;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #ffeeee;
+    font-weight: bold;
+	top:2.5rem;
+	margin-top:0;
+}
+
+li.header_menu a:hover{
+	background-color:#ffaaaa ;
+	color:#aa0000;
+}
+
+li.header_menu:hover{
+	background-color:#ffaaaa ;
+}
+	
+
+li.header_menu a::before{
+	content: "";
+	font-size: 2.4rem;
+	display: block;
+	width: 100%;
+	position: absolute;
+	font-family: "Material Icons";
+	top: -2.3rem;
+}
+
+li.header_menu:hover + a::before{
+	color:#aa0000;
+}
+
+
+li.header_menu.top a::before{
+	content:'home';
+}
+
+li.header_menu.about a::before{
+	content:'help';
+}
+
+li.header_menu.plans a::before{
+	content:'music_note';
+}
+
+li.header_menu.link a::before{
+	content:'insert_link';
+}
+
+li.header_menu.contact a::before{
+	content:'mail';
+}
+
+li.header_menu.news a::before{
+	content:'feed';
+}
+
+div.header_news{
+	display: flex;
+	padding:0;
+	margin: auto;
+	height: 3.6rem;
+	width: 22rem;
+	background-color:#cc0000;
+	border-radius: 0.4rem;
+}
+
+div.newsicon{
+	padding:0;
+	list-style: none;
+	margin: auto;
+	height: 3.6rem;
+	width: 4rem;
+	background-color:#cc0000;
+	border-radius: 0.4rem;
+}
+
+a.newsicon{
+	width:100%;
+	text-decoration: none;
+	display: block;
+    position: relative;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #ffeeee;
+    font-weight: bold;
+	top:2.5rem;
+}
+
+div.newsicon:hover{
+	background-color:#ffaaaa ;
+}
+
+a.newsicon:hover{
+	color:#aa0000
+}
+
+a.newsicon:hover::before{
+	color:#aa0000;
+}
+
+div.newses{
+	width:18rem;
+}
+
+a.newsicon::before{
+	content: 'feed';
+	font-size: 2.4rem;
+	display: block;
+	width: 100%;
+	position: absolute;
+	font-family: "Material Icons";
+	top: -2.3rem;
+}
+
+div.newses{
+	padding:0;
+	list-style: none;
+	margin: auto;
+	height: 3.6rem;
+	width: 18rem;
+	background-color:#cc0000;
+	border-radius: 0.4rem;
+}
+
+a.news,p.news{
+	text-decoration: none;
+	display: block;
+    position: relative;
+    text-align: left;
+	padding-left:0rem;
+	text-indent:0.8em;
+	font-size: 0.8rem;
+	padding-right: 0rem;
+	margin:0;
+	width:100%;
+	height:33.33%;
+	color: #ffeeee;
+    font-weight: bold;
+	border-radius: 0.4rem;
+}
+
+a.news:hover{
+	color:#aa0000;
+	background-color: #ffaaaa;
+}
+
+a.news:before,p.news:before{
+	font-style: normal;
+	content: "feed";
+	font-size: 0.8rem;
+	font-family: "Material Icons";
+	position: relative;
+	left:-0.3em;
+	top:2px;
+}
+
+a.news_new:before,p.news_new:before{
+	content: "tour";
+}
+
+/* PCの場合は非表示にするUI */
+div.header_news_mob{
+	display: none;
+}
+
+/* 画面の幅が中サイズ */
+@media screen and (max-width:52rem){
+	div.drawer{
+		display: none;
+	}
+
+	div.header{
+		width:32rem;
+	}
+
+	div.header_news{
+		width:4rem;
+	}
+
+	a.newsicon{
+		width:4rem;
+	}
+
+	div.newses{
+		display: none;
+	}
+}
+
+/* 画面の幅が小さい（スマホ想定） */
+/* ハンバーガーメニューを出す */
+@media screen and (max-width:34rem){
+	header{
+		width:100%;
+		margin-top:0;
+	}
+	div.header{
+		width:100%;
+		left: 100%;/* メニューを画面に入れる */
+		transition: 0.5s;
+		background-color: #ffdddd;
+		border-color: #ffdddd;
+		border-style:solid ;
+		border-right-width:4rem ;
+		border-left-width:0em ;
+		border-bottom-width:50rem ;
+	}
+
+	.drawer_open {
+		display: flex;
+		height: 45px;
+		width: 45px;
+		background-color: #ffdddd;
+		border-style: solid;
+		border-color: #aa0000;
+		border-width: 2px;
+		border-radius:15px;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top:1rem;
+		left: 89%;
+		z-index: 100;/* 重なり順を一番上にする */
+		cursor: pointer;
+	}
+
+	/* ハンバーガーメニューのアイコン */
+	.drawer_open span,
+	.drawer_open span:before,
+	.drawer_open span:after {
+		content: '';
+		display: block;
+		height: 3px;
+		width: 25px;
+		border-radius: 3px;
+		background: #333;
+		transition: 0.5s;
+		position: absolute;
+	}
+
+	/* 三本線の一番上の棒の位置調整 */
+	.drawer_open span:before {
+		bottom: 8px;
+	}
+
+	/* 三本線の一番下の棒の位置調整 */
+	.drawer_open span:after {
+		top: 8px;
+	}
+
+	/* アイコンがクリックされたら真ん中の線を透明にする */
+	#drawer_input:checked ~ .drawer_open span {
+		background: rgba(255, 255, 255, 0);
+	}
+
+	/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+	#drawer_input:checked ~ .drawer_open span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+
+	#drawer_input:checked ~ .drawer_open span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+	#drawer_input:checked ~ div.header {
+		left: 0%;/* メニューを画面に入れる */
+		transition: 0.5s;
+	}
+	
+	
+	/* メニューのデザイン*/
+	div.header {
+		display:flex;
+		position: fixed;
+		width:90%;
+		justify-content:center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	li.header_menu{
+		width:8rem;
+		height:6rem;
+		margin: 0.4rem;
+		margin-bottom:0.8rem;
+	}
+
+	li.header_menu a{
+		text-align: center;
+		font-size: 1rem;
+		top:4.2rem;
+	}
+
+	li.header_menu a::before{
+		font-size: 4rem;
+		width: 8rem;
+		top: -4rem;
+	}
+
+	div.header_news{
+		width:90%;
+		height:3.8rem;
+		margin: 0.4rem;
+		margin-bottom:0.8rem;
+	}
+
+	div.newsicon{
+		display: none;
+	}
+
+	div.header_news_mob{
+		display:block;
+	}
+
+	div.newses{
+		display:block;
+		width: 100%;
+		height:100%;
+	}
+
+	a.news,p.news{
+		font-size: 0.8rem;
+		padding-right: 0rem;
+		width:calc(100% - 1rem);
+		height:33.3333%;
+		margin:auto;
+	}
+}

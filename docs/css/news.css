@@ -1,0 +1,7 @@
+div.mainContents tr.renew_old{
+	display: table-row;
+}
+
+div.mainContents tr.renew_footer_only{
+	display:none;
+}
