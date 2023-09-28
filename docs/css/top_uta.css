@@ -92,6 +92,7 @@ a.uta_link{
 
 	div.top_uta_group{
 		width:90%;
+		max-width: 540px;
 		height:4.5rem;
 		display: block;
 		justify-content: space-between;
@@ -101,6 +102,7 @@ a.uta_link{
 		margin-bottom:0;
 	}
 	p.uta_l1,p.uta_l2,p.uta_user{
+		display: block;
 		-ms-writing-mode:lr-tb;
 		writing-mode: horizontal-tb;
 
