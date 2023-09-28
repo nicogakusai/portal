@@ -1,11 +1,11 @@
 let illustArray = [
-    "8398585.png",
-    "8426930.png",
-    "9034188.png",
-    "9063551.png",
-    "9164902.png",
-    "9543573.png",
-    "10156619.png",
+    "1st_1.png",
+    "1st_2.png",
+    "2nd_1.png",
+    "2nd_2.png",
+    "3rd.png",
+    "4th.png",
+    "5th.png",
 	"10th.jpg"
 ];
 
