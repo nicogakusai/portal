@@ -406,15 +406,15 @@ div.makimono{
 
 div.makimono1{
 	position:absolute;
-	width:96%;
+	width:99%;
 	height:90px;
 	background: linear-gradient(#000000,#101010,#222222,#222222,#101010,#000000);
 	border-radius: 15px/25px;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	text-align: center;
-	margin-left:2%;
-	margin-right:2%;
+	margin-left:0.5%;
+	margin-right:0.5%;
 	margin-top: 30px;
 	margin-bottom:0;
 	z-index: 7;
@@ -422,15 +422,15 @@ div.makimono1{
 }
 div.makimono2{
 	position:absolute;
-	width:90%;
+	width:94%;
 	height:150px;
 	background: linear-gradient(#002000,#004000,#006000,#004000,#002000);
 	border-radius: 15px/35px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	text-align: center;
-	margin-left:5%;
-	margin-right:5%;
+	margin-left:3%;
+	margin-right:3%;
 	margin-top:0;
 	margin-bottom:0;
 	z-index: 8;
@@ -517,14 +517,14 @@ div.mainContents{
 
 @media screen and (max-width:1200px){ /*PCの狭め対応*/
 	div.mainContents{
-		margin-left:7%;
-		margin-right:7%;
+		margin-left:6%;
+		margin-right:6%;
 	}
 
 	div.makimonoShadow{
 		position:absolute;
-		margin-left: 7%;
-		width:86%;
+		margin-left: 6%;
+		width:88%;
 	}
 	
 }
