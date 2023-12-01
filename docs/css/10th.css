@@ -53,6 +53,10 @@ h3 {
 	margin:0px;
 }
 
+h2.store::before{
+	content: 'storefront';
+}
+
 h4{
 	color: #006000;
 	font-style: bold;
