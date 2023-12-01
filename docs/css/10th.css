@@ -55,6 +55,7 @@ h3 {
 
 h2.store::before{
 	content: 'storefront';
+	font-weight: ;
 }
 
 h4{
