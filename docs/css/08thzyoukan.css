@@ -1,0 +1,26 @@
+/* 背景 */
+/* 繰り返し(パターン素材)の背景を置く */
+/* https://bg-patterns.com/ */
+body {
+	background-image: url("../parts/08th_new/08th_bg.png");
+	background-position:center center; 
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-size: 200px;
+	margin-top:50px;
+}
+
+/* 見出しの設定 */
+h1,h2,h3{
+	color: #fc0478;/*文字色*/
+}
+
+/* h2（見出し）、h3（小見出し）の手前のアイコンの設定*/
+/* 標準は音符 */
+/* Googleのマテリアルフォントから指定する。 */
+
+h2:before,h3:before {
+	content: 'theater_comedy';
+	top: 3px;
+}
