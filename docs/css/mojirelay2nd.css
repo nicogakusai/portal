@@ -1,0 +1,117 @@
+/* 背景 */
+/* 繰り返し(パターン素材)の背景を置く */
+/* https://bg-patterns.com/ */
+body {
+	background-image: url("../parts/mojirelay2nd/mojirelay2nd_bg.jpg");
+	background-position:center center; 
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-size: 200px;
+	margin-top:50px;
+}
+
+/* 見出しの設定 */
+h1,h2,h3{
+	color: #00afcc;/*文字色*/
+}
+
+/* h2（見出し）、h3（小見出し）の手前のアイコンの設定*/
+/* 標準は音符 */
+/* Googleのマテリアルフォントから指定する。 */
+
+h2:before,h3:before {
+	content: 'edit';
+	top: 3px;
+}
+
+table.spec{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #ffe4b5;
+	border: none;	
+}
+
+table.spec th{
+	background-color: #00afcc;
+	color: #ffffff;
+	font-weight: bold;
+	padding-left:8px;
+	padding-right:8px;
+	border-style: solid 1px #000000;
+	margin: 0px;
+}
+
+table.spec td{
+	padding-left:8px;
+	padding-right:8px;
+	border: solid 1px #000000;
+	margin: 0px;
+
+}
+
+
+li {
+	padding-right: 0em;
+	padding-left: 1em;
+}
+
+
+
+div.concept{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-family: serif;
+	padding: 5px;
+	background:rgb(255,255,255);
+	border-left: 3px double #f2d58a;
+	border-right: 3px double #f2d58a;
+	border-top: 3px double #f2d58a;
+	border-bottom: 3px double #f2d58a;
+}
+
+.box1 li {
+	text-indent: -1.5em;
+	padding-left: -1.5em;
+}
+
+.box2 li {
+	text-indent: 0em;
+	padding-left: 0em;
+}
+
+button{
+	margin-right:20px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius:10px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-family: 'Zen Antique';
+	background-color:#0f0202;
+	color :#faf386;
+}
+
+button.close{
+	background-color:#a0a0a0;
+	color :#000000;
+}
+
+button.close:hover{
+	background-color:#a0a0a0;
+	color :#000000;
+}
+
+summary {
+	display: block;
+	list-style: none;
+  }
+
+summary::-webkit-details-marker { 
+	display: none 
+}
