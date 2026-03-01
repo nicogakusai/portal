@@ -1,0 +1,34 @@
+body {
+	background-image: url("../parts/12th/p_new0483_l_new04832.jpg");
+	background-position:center center; 
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-size: 200px;
+	margin-top:50px;
+}
+
+/* 見出しの設定 */
+h1,h2,h3,h4{
+	color: #500080;/*文字色*/
+}
+
+/* h2（見出し）、h3（小見出し）の手前のアイコンの設定*/
+/* 標準は音符 */
+/* Googleのマテリアルフォントから指定する。 */
+
+h2:before,h3:before {
+	font-family: "Material Icons Outlined";
+	content: 'door_back';
+	top: 3px;
+}
+
+ul{
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 1em;
+}
+li{
+	margin-top: 0.2em;
+	margin-bottom:0px;
+}
