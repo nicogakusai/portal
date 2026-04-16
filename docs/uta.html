@@ -34,13 +34,13 @@
 
 <body>
 	<div class="mainContents">
-    <div id="head"><h1>東方ニコ楽祭　イラスト・歌詠み一覧</h1></div>
+    <div id="head"><h1>東方ニコ楽祭&emsp;イラスト・歌詠み一覧</h1></div>
 <script type="text/javascript">
 
     /* ここからメンテナンス範囲 */
 
     //読み込むcsvリスト
-    var festnames=["tsukimi","hanami","syuen","kaikou","shinshun","shijin","6","7","8","9","10"];   //URLのfest=につけるお祭り英語表記
+    var festnames=["tsukimi","hanami","syuen","kaikou","shinshun","shijin","gairai","7","8","9","10"];   //URLのfest=につけるお祭り英語表記
     var festinfo = [];
     //["読み込むcsvの名前","表示するお祭り名"];
     festinfo[festnames[0]] = ["tsukimi.csv","月見"];
@@ -49,7 +49,7 @@
     festinfo[festnames[3]] = ["kaikou.csv","邂逅"];    //ここに歌のcsvのファイル名と漢字名を入力していく。
     festinfo[festnames[4]] = ["shinshun.csv","新春"];
     festinfo[festnames[5]] = ["shijin.csv","思人"];
-    festinfo[festnames[6]] = ["",""];
+    festinfo[festnames[6]] = ["gairai.csv","外来"];
     festinfo[festnames[7]] = ["",""];
     festinfo[festnames[8]] = ["",""];
     festinfo[festnames[9]] = ["",""];
@@ -123,25 +123,25 @@
     // 歌一覧リンクを表示する。
     document.write("<h2>歌紹介はこちらから</h2>")
     document.write("<table border='1' rules='all'><tr>")
-    document.write("<td>　<a href='uta.html?fest=all'>全部</a>　</td>")
+    document.write("<td>&emsp;<a href='uta.html?fest=all'>全部</a>&emsp;</td>")
     for(i=0;i<festnames.length;i++){
         if(festinfo[festnames[i]][0]!=""){
-            document.write("<td>　<a href='uta.html?fest=" + festnames[i] + "'>" + festinfo[festnames[i]][1] + "</a>　</td>")
+            document.write("<td>&emsp;<a href='uta.html?fest=" + festnames[i] + "'>" + festinfo[festnames[i]][1] + "</a>&emsp;</td>")
             if(i%5==3){
                 document.write("</tr><tr>");
             }
         }
     }
     document.write("</tr>");
-	document.write("<td colspan=\"5\">　<a href='uta.html?fest=nicodosai_15th'>第15回東方ニコ童祭 半刻歌絵巻</a></td></tr></table>")
+	document.write("<td colspan=\"5\">&emsp;<a href='uta.html?fest=nicodosai_15th'>第15回東方ニコ童祭 半刻歌絵巻</a></td></tr></table>")
 
     // イラスト一覧リンクを表示する。
     document.write("<h2>イラスト一覧はこちらから</h2>")
     document.write("<table border='1' rules='all'><tr>")
-    document.write("<td>　<a href='uta.html?mode=illustlist'>全部</a>　</td>")
+    document.write("<td>&emsp;<a href='uta.html?mode=illustlist'>全部</a>&emsp;</td>")
     for(i=0;i<festnames.length;i++){
         if(festinfo[festnames[i]][0]!=""){
-            document.write("<td>　<a href='uta.html?fest=" + festnames[i] + "&mode=illustlist'>" + festinfo[festnames[i]][1] + "</a>　</td>")
+            document.write("<td>&emsp;<a href='uta.html?fest=" + festnames[i] + "&mode=illustlist'>" + festinfo[festnames[i]][1] + "</a>&emsp;</td>")
             if(i%5==3){
                 document.write("</tr><tr>");
             }
@@ -153,10 +153,10 @@
     //詠み人一覧リンクを表示する
     document.write("<h2>詠み人一覧はこちらから</h2>")
     document.write("<table border='1' rules='all'><tr>")
-    document.write("<td>　<a href='uta.html?mode=userlist'>全部</a>　</td>")
+    document.write("<td>&emsp;<a href='uta.html?mode=userlist'>全部</a>&emsp;</td>")
     for(i=0;i<festnames.length;i++){
         if(festinfo[festnames[i]][0]!=""){
-            document.write("<td>　<a href='uta.html?fest=" + festnames[i] + "&mode=userlist'>" + festinfo[festnames[i]][1] + "</a>　</td>")
+            document.write("<td>&emsp;<a href='uta.html?fest=" + festnames[i] + "&mode=userlist'>" + festinfo[festnames[i]][1] + "</a>&emsp;</td>")
             if(i%5==3){
                 document.write("</tr><tr>");
             }
@@ -341,9 +341,9 @@
 
                     if(utaNoInIllust==-1 || utaCountInIllust == utaNoInIllust){
                         document.write("<table class='uta' rules='none'><body text='#000000'><p align='center'>");
-                        document.write("<tr><td align=left>　" + array[i][2] + "</td></tr>");
+                        document.write("<tr><td align=left>&emsp;" + array[i][2] + "</td></tr>");
                         document.write("<tr><td align=center>" + array[i][3] + "</td></tr>");
-                        document.write("<tr><td align=right>" + array[i][4] + "　</td></tr></table>");
+                        document.write("<tr><td align=right>" + array[i][4] + "&emsp;</td></tr></table>");
 
 						if(array[i][6]!="nicodosai_15th"){
 	                        document.write("<p><font size='3'><a href='uta.html?user=" + encodeURI(array[i][4]) + "'>この詠み手の歌をもっと見る</a></font></p><br>");

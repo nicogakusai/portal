@@ -85,7 +85,43 @@
 				<ul>コメントの際は、ハンドルネームをつけていただけると嬉しいです。<br>記載がない場合は、「詠み人知らず」となります。</ul>
 			<li>お一人での複数回の歌詠みも大歓迎です。</li>
 			<li>歌詠みは、生放送・X・まとめ動画などで、使用また紹介されることがあります。</li>
-
+		<h4>投稿いただいた歌詠み</h4>
+			<script type="text/javascript">
+				var utaCount = 0;
+				var array = loadFile("gairai.csv");
+				if(utaCount > 0){
+				  var utaNo = Math.floor(Math.random()*utaCount);
+				  var imgiframe = "<div class=flex> <iframe width='312' height=\"176\" src=\"https://ext.seiga.nicovideo.jp/thumb/"+ array[utaNo][0] +"\" scrolling=\"no\" style=\"border:solid 1px #888;\" frameborder=\"0\"><a href=\"https://seiga.nicovideo.jp/seiga/"+ array[utaNo][0] +"\"> " + array[utaNo][1] + "</a></iframe>";
+				  var imginfo = "<table border='2' rules='cols'  cellpadding='0'><tr><td width='600' bgcolor='#000000'><font size='3'>&emsp;<a href='uta.html?illust=" + array[utaNo][0] + "'><font color='#ffffff'>このイラストの歌をもっと見る</font></a><br>　<a href='uta.html?user=" + encodeURI(array[utaNo][4]) + "'><font color='#ffffff'>この詠み手の歌をもっと見る</font></a><br>&emsp;<a href='uta.html?fest=" + array[utaNo][6] + "'><font color='#ffffff'>東方ニコ楽祭・"+array[utaNo][5]+"の歌をもっと見る</font></a></font></td></tr>";
+				  document.write(imgiframe+imginfo);
+				  document.write("<tr><td align=left bgcolor='#FFFFF0'><font face='Noto Serif JP'>&emsp;" + array[utaNo][2] + "</font></td></tr>");
+				  document.write("<tr><td align=center bgcolor='#FFFFF0'><font face='Noto Serif JP'> " + array[utaNo][3] + " </font></td></tr>");
+				  document.write("<tr><td align=right bgcolor='#FFFFF0'><font face='Noto Serif JP'>" + array[utaNo][4] + "&emsp;</font></td></tr></table></div>");
+				}
+			  
+				function loadFile(filename){
+				  var fileData = new XMLHttpRequest();
+				  var resultArray = new Array();
+			  
+				  if(filename.length!=0){
+					var filePath = "uta/" + filename;
+			  
+					fileData.open("get", filePath, false);
+					fileData.send(null);
+			  
+					var lines = fileData.responseText.replace(/""/g,"【ダブルクォート2個】").replace(/"/g,"").replace(/【ダブルクォート2個】/g,'"').split("\n");
+			  
+					for(var i=0; i<lines.length; i++){
+					  var tmp = lines[i].split(",");
+					  if(tmp.length != 1){
+						resultArray.push(tmp);
+						utaCount = utaCount + 1;
+					  }
+					}
+				  }
+				  return resultArray;
+				}
+			  </script>
 </div>
 
 <div id="footer"></div>

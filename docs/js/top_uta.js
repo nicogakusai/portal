@@ -1,5 +1,5 @@
 let festinfo = new Array();
-let festCount = 6;
+let festCount = 7;
 let festNo = Math.floor(Math.random()*festCount);
 let utaArrays = new Array();
 let utaArray = new Array();
@@ -10,7 +10,7 @@ festinfo[2] = "syuen.csv";
 festinfo[3]= "kaikou.csv";    //ここに歌のcsvのファイル名を入力していく。
 festinfo[4] = "shinshun.csv";
 festinfo[5] = "shijin.csv";
-festinfo[6] = "";
+festinfo[6] = "gairai.csv";
 
 utaArray = loadFile(festinfo[festNo]);
 
